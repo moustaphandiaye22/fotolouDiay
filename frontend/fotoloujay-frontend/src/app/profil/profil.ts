@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, Location } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -49,7 +49,8 @@ export class Profil implements OnInit {
     private authService: AuthService,
     private produitService: ProduitService,
     private snackBar: MatSnackBar,
-    private router: Router
+    private router: Router,
+    private location: Location
   ) {
     this.profileForm = this.fb.group({
       nom: ['', [Validators.required, Validators.minLength(2)]],
@@ -63,6 +64,12 @@ export class Profil implements OnInit {
       nouveauMotDePasse: ['', [Validators.required, Validators.minLength(6)]],
       confirmerMotDePasse: ['', [Validators.required]]
     }, { validators: this.passwordMatchValidator });
+
+    const storedUser = this.authService.getCurrentUser() as User | null;
+    if (storedUser) {
+      this.user = storedUser;
+      this.updateProfileForm(storedUser);
+    }
   }
 
   ngOnInit() {
@@ -71,20 +78,20 @@ export class Profil implements OnInit {
     this.loadProductStats();
   }
 
+  goBack() {
+    this.location.back();
+  }
+
   loadUserProfile() {
     this.isLoading = true;
     this.authService.getProfile().subscribe({
       next: (response) => {
         this.isLoading = false;
         if (response.success) {
-          this.user = response.data;
+          const userData = response.data?.utilisateur || response.data;
+          this.user = userData;
           if (this.user) {
-            this.profileForm.patchValue({
-              nom: this.user.nom,
-              prenom: this.user.prenom || '',
-              email: this.user.email,
-              telephone: this.user.telephone || ''
-            });
+            this.updateProfileForm(this.user);
           }
         } else {
           this.showError('Erreur lors du chargement du profil');
@@ -220,6 +227,15 @@ export class Profil implements OnInit {
     }
 
     return null;
+  }
+
+  private updateProfileForm(user: User) {
+    this.profileForm.patchValue({
+      nom: user.nom,
+      prenom: user.prenom || '',
+      email: user.email,
+      telephone: user.telephone || ''
+    });
   }
 
   private showSuccess(message: string) {

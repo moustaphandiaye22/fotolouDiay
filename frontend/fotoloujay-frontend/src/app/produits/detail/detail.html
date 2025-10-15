@@ -138,6 +138,22 @@
           Rejeter
         </button>
       </div>
+
+      <div class="purchase-section" *ngIf="!isOwner && produit.statut === 'VALIDE'">
+        <button
+          mat-raised-button
+          color="accent"
+          (click)="acheterProduit()"
+          [disabled]="isProcessingPayment">
+          <mat-icon *ngIf="!isProcessingPayment">shopping_cart</mat-icon>
+          <mat-spinner *ngIf="isProcessingPayment" diameter="20"></mat-spinner>
+          {{ isProcessingPayment ? 'Traitement...' : 'Acheter maintenant' }}
+        </button>
+        <div *ngIf="paymentError" class="payment-error">
+          <mat-icon>error</mat-icon>
+          {{ paymentError }}
+        </div>
+      </div>
     </div>
   </div>
 

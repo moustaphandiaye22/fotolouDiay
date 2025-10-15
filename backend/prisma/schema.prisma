@@ -21,12 +21,13 @@ model Utilisateur {
   estActif       Boolean    @default(true)
   dateCreation   DateTime   @default(now())
   dateModification DateTime @updatedAt
-  
+
   // Relations
   produits       Produit[]
   notifications  Notification[]
   vuesProduites  VueProduit[]
-  
+  paiements      Paiement[]
+
   @@map("utilisateurs")
 }
 
@@ -45,12 +46,13 @@ model Produit {
   dateCreation    DateTime   @default(now())
   dateModification DateTime  @updatedAt
   dateExpiration  DateTime   // Calculée automatiquement (+7 jours)
-  
+
   // Relations
   utilisateurId   Int
   utilisateur     Utilisateur @relation(fields: [utilisateurId], references: [id], onDelete: Cascade)
   vuesProduites   VueProduit[]
-  
+  paiements       Paiement[]
+
   @@map("produits")
   @@index([statut])
   @@index([estVip])
@@ -78,15 +80,58 @@ model VueProduit {
   id            Int        @id @default(autoincrement())
   dateVue       DateTime   @default(now())
   adresseIp     String?
-  
+
   // Relations
   produitId     Int
   produit       Produit    @relation(fields: [produitId], references: [id], onDelete: Cascade)
   utilisateurId Int?       // Optionnel si l'utilisateur est connecté
   utilisateur   Utilisateur? @relation(fields: [utilisateurId], references: [id], onDelete: SetNull)
-  
+
   @@map("vues_produits")
   @@unique([produitId, utilisateurId, adresseIp]) // Éviter les doublons de vues
+}
+
+model Paiement {
+  id              Int        @id @default(autoincrement())
+  reference       String     @unique
+  montant         Float
+  prestataire     PrestatairePaiement
+  statut          StatutPaiement @default(EN_ATTENTE)
+  dateExpiration  DateTime
+  dateCreation    DateTime   @default(now())
+  dateModification DateTime  @updatedAt
+  metadata        Json?
+
+  // Relations
+  utilisateurId   Int
+  utilisateur     Utilisateur @relation(fields: [utilisateurId], references: [id], onDelete: Cascade)
+  produitId       Int
+  produit         Produit     @relation(fields: [produitId], references: [id], onDelete: Cascade)
+  transactions    Transaction[]
+
+  @@map("paiements")
+  @@index([reference])
+  @@index([statut])
+  @@index([dateExpiration])
+}
+
+model Transaction {
+  id              Int        @id @default(autoincrement())
+  type            TypeTransaction
+  montant         Float
+  statut          StatutTransaction @default(EN_ATTENTE)
+  referenceExterne String?   // Référence du prestataire de paiement
+  dateCreation    DateTime   @default(now())
+  dateModification DateTime  @updatedAt
+  details         Json?      // Détails supplémentaires de la transaction
+
+  // Relations
+  paiementId      Int
+  paiement        Paiement   @relation(fields: [paiementId], references: [id], onDelete: Cascade)
+
+  @@map("transactions")
+  @@index([paiementId])
+  @@index([statut])
 }
 
 // Enums
@@ -94,7 +139,7 @@ enum RoleUtilisateur {
   UTILISATEUR
   MODERATEUR
   ADMINISTRATEUR
-  
+
   @@map("role_utilisateur")
 }
 
@@ -103,7 +148,7 @@ enum StatutProduit {
   VALIDE        // Validé et visible pour tous
   REJETE        // Rejeté par un modérateur
   EXPIRE        // Expiré automatiquement après 7 jours
-  
+
   @@map("statut_produit")
 }
 
@@ -113,6 +158,42 @@ enum TypeNotification {
   PRODUIT_VALIDE    // Produit validé par modérateur
   PRODUIT_REJETE    // Produit rejeté par modérateur
   RAPPEL            // Rappel pour republier
-  
+
   @@map("type_notification")
+}
+
+enum PrestatairePaiement {
+  WAVE
+  ORANGE_MONEY
+  PAYTECH
+  CARTE
+
+  @@map("prestataire_paiement")
+}
+
+enum StatutPaiement {
+  EN_ATTENTE
+  CONFIRME
+  ANNULE
+  ECHEC
+  EXPIRE
+
+  @@map("statut_paiement")
+}
+
+enum TypeTransaction {
+  DEBIT
+  CREDIT
+  REMBOURSEMENT
+
+  @@map("type_transaction")
+}
+
+enum StatutTransaction {
+  EN_ATTENTE
+  SUCCES
+  ECHEC
+  ANNULE
+
+  @@map("statut_transaction")
 }

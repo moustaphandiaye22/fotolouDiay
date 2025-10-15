@@ -54,17 +54,143 @@ textarea.form-control {
   font-family: inherit;
 }
 
+.photo-step {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.step-header {
+  margin-bottom: 2rem;
+}
+
+.step-header h2 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.step-header p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.camera-section {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.camera-preview-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.camera-preview-container .hidden {
+  display: none;
+}
+
+.camera-preview {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  border-radius: 1rem;
+  border: 2px solid #e0e0e0;
+  background: #000;
+  object-fit: cover;
+}
+
+.capture-controls {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn-capture {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.btn-capture:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+}
+
+.btn-capture:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.camera-loading {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.camera-icon {
+  font-size: 2rem;
+}
+
+.details-step {
+  padding-top: 1rem;
+}
+
+.photo-preview-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
 .image-preview {
+  position: relative;
   margin-top: 1rem;
   border-radius: 0.5rem;
   overflow: hidden;
   max-width: 300px;
+  border: 2px solid #e0e0e0;
 }
 
 .image-preview img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.btn-retake {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(220, 53, 69, 0.9);
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-retake:hover {
+  background: rgba(220, 53, 69, 1);
 }
 
 .checkbox-group label {
@@ -127,6 +253,18 @@ textarea.form-control {
 
 .btn-secondary:hover {
   background: #e0e0e0;
+}
+
+.btn-retry {
+  background: #ffc107;
+  color: #212529;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+.btn-retry:hover {
+  background: #e0a800;
 }
 
 @media (max-width: 768px) {

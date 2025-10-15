@@ -31,7 +31,10 @@ export const MESSAGES_SUCCES = {
   PRODUIT_VALIDE: 'Produit validé avec succès',
   PRODUIT_REJETE: 'Produit rejeté',
   NOTIFICATION_ENVOYEE: 'Notification envoyée',
-  VUE_ENREGISTREE: 'Vue enregistrée'
+  VUE_ENREGISTREE: 'Vue enregistrée',
+  PAIEMENT_INITIE: 'Paiement initié avec succès',
+  PAIEMENT_CONFIRME: 'Paiement confirmé avec succès',
+  PAIEMENT_ANNULE: 'Paiement annulé avec succès'
 } as const;
 
 // Messages d'erreur
@@ -60,7 +63,10 @@ export const MESSAGES_ERREUR = {
   // Erreurs générales
   ERREUR_SERVEUR: 'Erreur interne du serveur',
   ERREUR_BASE_DONNEES: 'Erreur de base de données',
-  ERREUR_UPLOAD: 'Erreur lors du téléchargement de l\'image'
+  ERREUR_UPLOAD: 'Erreur lors du téléchargement de l\'image',
+
+  // Erreurs de paiement
+  PAIEMENT_NON_TROUVE: 'Paiement non trouvé'
 } as const;
 
 // Messages de validation

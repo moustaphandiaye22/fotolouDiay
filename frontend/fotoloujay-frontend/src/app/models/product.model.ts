@@ -25,6 +25,7 @@ export interface Product {
     id: number;
     nom: string;
     prenom?: string;
+    telephone?: string;
   };
 }
 
@@ -55,4 +56,26 @@ export interface ProductStats {
   produitsValides: number;
   produitsVips: number;
   vuesTotales: number;
+}
+
+export enum PaymentProvider {
+  WAVE = 'WAVE',
+  ORANGE_MONEY = 'ORANGE_MONEY',
+  PAYTECH = 'PAYTECH',
+  CARTE = 'CARTE'
+}
+
+export interface PaymentInitiationRequest {
+  produitId: number;
+  montant: number;
+  prestataire: PaymentProvider;
+  callbackUrl?: string;
+  metadata?: Record<string, any>;
+}
+
+export interface PaymentInitiationResponse {
+  success: boolean;
+  redirectUrl?: string;
+  paymentReference?: string;
+  message?: string;
 }

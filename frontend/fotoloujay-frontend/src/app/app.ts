@@ -68,10 +68,8 @@ export class App implements OnInit, OnDestroy {
   private loadCurrentUser() {
     this.authService.getProfile().subscribe({
       next: (response) => {
-        console.log('Full profile response:', response);
         if (response.success) {
           const userData = response.data.utilisateur || response.data;
-          console.log('User data extracted:', userData);
           this.currentUser = userData;
           this.isLoggedIn = true;
           localStorage.setItem('user', JSON.stringify(userData));

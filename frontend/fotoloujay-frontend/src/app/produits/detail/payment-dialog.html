@@ -1,0 +1,37 @@
+<div class="payment-dialog">
+  <h2 mat-dialog-title>Choisir un mode de paiement</h2>
+
+  <mat-dialog-content>
+    <mat-card class="product-summary">
+      <mat-card-content>
+        <h3>{{ data.produit.titre }}</h3>
+        <p class="price">{{ formatPrix(data.produit.prix) }}</p>
+      </mat-card-content>
+    </mat-card>
+
+    <div class="payment-options">
+      <mat-radio-group [(ngModel)]="selectedProvider" class="payment-radio-group">
+        <mat-radio-button
+          *ngFor="let provider of paymentProviders"
+          [value]="provider.value"
+          class="payment-option">
+          <div class="provider-info">
+            <span class="icon">{{ provider.icon }}</span>
+            <span class="label">{{ provider.label }}</span>
+          </div>
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button mat-button (click)="onCancel()">Annuler</button>
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="!selectedProvider"
+      (click)="onConfirm()">
+      Confirmer
+    </button>
+  </mat-dialog-actions>
+</div>

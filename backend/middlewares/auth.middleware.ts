@@ -23,6 +23,9 @@ declare global {
       utilisateur?: {
         id: number;
         email: string;
+        nom: string;
+        prenom?: string | null;
+        telephone?: string | null;
         role: RoleUtilisateur;
       };
     }
@@ -68,6 +71,9 @@ export const verifierToken = async (req: Request, res: Response, next: NextFunct
       select: {
         id: true,
         email: true,
+        nom: true,
+        prenom: true,
+        telephone: true,
         role: true,
         estActif: true
       }
@@ -84,6 +90,9 @@ export const verifierToken = async (req: Request, res: Response, next: NextFunct
     req.utilisateur = {
       id: utilisateur.id,
       email: utilisateur.email,
+      nom: utilisateur.nom,
+      prenom: utilisateur.prenom,
+      telephone: utilisateur.telephone,
       role: utilisateur.role as RoleUtilisateur
     };
 
@@ -148,6 +157,9 @@ export const authentificationOptionnelle = async (req: Request, res: Response, n
       select: {
         id: true,
         email: true,
+        nom: true,
+        prenom: true,
+        telephone: true,
         role: true
       }
     });
@@ -156,6 +168,9 @@ export const authentificationOptionnelle = async (req: Request, res: Response, n
       req.utilisateur = {
         id: utilisateur.id,
         email: utilisateur.email,
+        nom: utilisateur.nom,
+        prenom: utilisateur.prenom,
+        telephone: utilisateur.telephone,
         role: utilisateur.role as RoleUtilisateur
       };
     }

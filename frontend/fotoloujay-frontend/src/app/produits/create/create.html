@@ -1,102 +1,152 @@
 <div class="create-container">
   <div class="create-card">
     <h1>Ajouter un Produit</h1>
-    
-    <form (ngSubmit)="onSubmit()" #productForm="ngForm">
-      <div class="form-group">
-        <label for="titre">Titre du produit *</label>
-        <input
-          type="text"
-          id="titre"
-          name="titre"
-          [(ngModel)]="produit.titre"
-          required
-          class="form-control"
-          placeholder="Ex: iPhone 13 Pro Max">
+
+    <!-- Step 1: Photo Capture -->
+    <div *ngIf="!imagePreview" class="photo-step">
+      <div class="step-header">
+        <h2>Étape 1: Prendre une photo</h2>
+        <p>Positionnez votre produit et prenez une photo</p>
       </div>
 
-      <div class="form-group">
-        <label for="description">Description *</label>
-        <textarea
-          id="description"
-          name="description"
-          [(ngModel)]="produit.description"
-          required
-          rows="5"
-          class="form-control"
-          placeholder="Décrivez votre produit en détail..."></textarea>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label for="prix">Prix (FCFA) *</label>
-          <input
-            type="number"
-            id="prix"
-            name="prix"
-            [(ngModel)]="produit.prix"
-            required
-            min="0"
-            class="form-control"
-            placeholder="0">
+      <div class="camera-section">
+        <div class="camera-preview-container">
+          <video
+            #cameraVideo
+            id="camera-preview"
+            autoplay
+            playsinline
+            muted
+            [ngClass]="{'hidden': !isCameraActive}"
+            class="camera-preview">
+          </video>
+          <div class="capture-controls" [ngClass]="{'hidden': !isCameraActive}">
+            <button
+              type="button"
+              class="btn btn-capture"
+              (click)="capturePhoto()"
+              [disabled]="isCapturing">
+              <i class="camera-icon">📷</i>
+              <span>{{ isCapturing ? 'Capture en cours...' : 'Prendre la photo' }}</span>
+            </button>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="localisation">Localisation</label>
-          <input
-            type="text"
-            id="localisation"
-            name="localisation"
-            [(ngModel)]="produit.localisation"
-            class="form-control"
-            placeholder="Ex: Dakar, Sénégal">
+        <div *ngIf="!isCameraActive && !errorMessage" class="camera-loading">
+          <p>Activation de la caméra...</p>
         </div>
-      </div>
-
-      <div class="form-group">
-        <label for="photo">Photo du produit *</label>
-        <input
-          type="file"
-          id="photo"
-          name="photo"
-          (change)="onFileSelected($event)"
-          accept="image/*"
-          required
-          class="form-control">
-        
-        <div *ngIf="imagePreview" class="image-preview">
-          <img [src]="imagePreview" alt="Aperçu">
-        </div>
-      </div>
-
-      <div class="form-group checkbox-group">
-        <label>
-          <input
-            type="checkbox"
-            name="estVip"
-            [(ngModel)]="produit.estVip">
-          <span>Produit VIP (mise en avant)</span>
-        </label>
       </div>
 
       <div *ngIf="errorMessage" class="error-message">
         {{ errorMessage }}
-      </div>
-
-      <div class="form-actions">
         <button
           type="button"
-          class="btn btn-secondary"
-          [routerLink]="['/produits/mes-produits']">
-          Annuler
-        </button>
-        <button
-          type="submit"
-          class="btn btn-primary"
-          [disabled]="!productForm.form.valid || isSubmitting">
-          {{ isSubmitting ? 'Création en cours...' : 'Créer le produit' }}
+          class="btn btn-retry"
+          (click)="retryCamera()">
+          Réessayer
         </button>
       </div>
-    </form>
+    </div>
+
+    <!-- Step 2: Product Details -->
+    <div *ngIf="imagePreview" class="details-step">
+      <div class="step-header">
+        <h2>Étape 2: Informations du produit</h2>
+        <p>Remplissez les détails de votre produit</p>
+      </div>
+
+      <div class="photo-preview-section">
+        <div class="image-preview">
+          <img [src]="imagePreview" alt="Photo du produit">
+          <button
+            type="button"
+            class="btn btn-retake"
+            (click)="retakePhoto()">
+            Reprendre la photo
+          </button>
+        </div>
+      </div>
+
+      <form (ngSubmit)="onSubmit()" #productForm="ngForm">
+        <div class="form-group">
+          <label for="titre">Titre du produit *</label>
+          <input
+            type="text"
+            id="titre"
+            name="titre"
+            [(ngModel)]="produit.titre"
+            required
+            class="form-control"
+            placeholder="Ex: iPhone 13 Pro Max">
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description *</label>
+          <textarea
+            id="description"
+            name="description"
+            [(ngModel)]="produit.description"
+            required
+            rows="5"
+            class="form-control"
+            placeholder="Décrivez votre produit en détail..."></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="prix">Prix (FCFA) *</label>
+            <input
+              type="number"
+              id="prix"
+              name="prix"
+              [(ngModel)]="produit.prix"
+              required
+              min="0"
+              class="form-control"
+              placeholder="0">
+          </div>
+
+          <div class="form-group">
+            <label for="localisation">Localisation</label>
+            <input
+              type="text"
+              id="localisation"
+              name="localisation"
+              [(ngModel)]="produit.localisation"
+              class="form-control"
+              placeholder="Ex: Dakar, Sénégal">
+          </div>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label>
+            <input
+              type="checkbox"
+              name="estVip"
+              [(ngModel)]="produit.estVip">
+            <span>Produit VIP (mise en avant)</span>
+          </label>
+        </div>
+
+        <div *ngIf="errorMessage" class="error-message">
+          {{ errorMessage }}
+        </div>
+
+        <div class="form-actions">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="retakePhoto()">
+            Reprendre
+          </button>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="!productForm.form.valid || isSubmitting">
+            {{ isSubmitting ? 'Création en cours...' : 'Créer le produit' }}
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>

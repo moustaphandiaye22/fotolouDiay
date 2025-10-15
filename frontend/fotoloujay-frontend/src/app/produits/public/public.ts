@@ -9,6 +9,8 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { RouterModule } from '@angular/router';
 import { ProduitService } from '../../services/produit';
 import { Product } from '../../models';
@@ -26,6 +28,8 @@ import { Product } from '../../models';
     MatInputModule,
     MatFormFieldModule,
     MatSelectModule,
+    MatTooltipModule,
+    MatPaginatorModule,
     RouterModule
   ],
   templateUrl: './public.html',
@@ -38,6 +42,7 @@ export class Public implements OnInit {
   isLoading = false;
   errorMessage = '';
   showVipOnly = false;
+  viewMode: 'grid' | 'list' = 'grid';
 
   searchTerm = '';
   selectedCategorie = '';
@@ -47,6 +52,12 @@ export class Public implements OnInit {
 
   categories: string[] = [];
   localisations: string[] = [];
+
+  // Pagination properties
+  currentPage = 1;
+  pageSize = 20;
+  totalItems = 0;
+  totalPages = 0;
 
   constructor(private produitService: ProduitService) {}
 
@@ -64,6 +75,8 @@ export class Public implements OnInit {
         this.isLoading = false;
         if (response.success) {
           this.produits = response.data?.produits || [];
+          this.totalItems = response.data?.pagination?.total || 0;
+          this.totalPages = response.data?.pagination?.totalPages || 0;
           this.extractFilters();
           this.appliquerFiltres();
         } else {
@@ -156,5 +169,35 @@ export class Public implements OnInit {
       style: 'currency',
       currency: 'XOF'
     }).format(prix);
+  }
+
+  toggleViewMode() {
+    this.viewMode = this.viewMode === 'grid' ? 'list' : 'grid';
+  }
+
+  onPageChange(event: any) {
+    this.currentPage = event.pageIndex + 1;
+    this.pageSize = event.pageSize;
+    this.loadProduitsPublics();
+  }
+
+  callUser(phoneNumber?: string) {
+    if (phoneNumber) {
+      window.open(`tel:${phoneNumber}`, '_self');
+    }
+  }
+
+  whatsappUser(phoneNumber?: string, productTitle?: string) {
+    if (phoneNumber) {
+      const message = `Bonjour, je suis intéressé par votre produit: ${productTitle}`;
+      const whatsappUrl = `https://wa.me/${phoneNumber.replace(/\s+/g, '')}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+  }
+
+  messageUser(produit: Product) {
+    // TODO: Implement messaging functionality
+    console.log('Message user for product:', produit);
+    // This could open a chat dialog or navigate to a messaging page
   }
 }

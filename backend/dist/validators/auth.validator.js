@@ -94,8 +94,6 @@ exports.validationProduit = [
         .trim(),
     (0, express_validator_1.body)('estVip')
         .optional()
-        .isBoolean()
-        .withMessage('Le statut VIP doit être un booléen')
 ];
 /**
  * Validateurs pour la mise à jour d'un produit
@@ -122,8 +120,6 @@ exports.validationMiseAJourProduit = [
         .trim(),
     (0, express_validator_1.body)('estVip')
         .optional()
-        .isBoolean()
-        .withMessage('Le statut VIP doit être un booléen')
 ];
 /**
  * Validateurs pour les notifications

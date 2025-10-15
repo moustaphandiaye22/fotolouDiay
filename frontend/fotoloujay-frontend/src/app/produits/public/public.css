@@ -13,6 +13,12 @@
   gap: 20px;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .header h1 {
    color: var(--mat-sys-on-surface);
    margin: 0;
@@ -114,6 +120,63 @@
   margin-top: 20px;
 }
 
+.products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.products-list .product-card {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  min-height: 200px;
+}
+
+.products-list .product-image {
+  width: 250px;
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.products-list .product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px 0 0 4px;
+}
+
+.products-list .product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.products-list .product-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: auto;
+}
+
+.products-list .location, .products-list .category, .products-list .views {
+  flex: 1;
+  min-width: 150px;
+}
+
+.products-list .product-footer {
+  border-top: 1px solid var(--mat-sys-outline-variant);
+  padding-top: 10px;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--mat-sys-on-surface-variant);
+}
+
 .product-card {
    cursor: pointer;
    transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -186,10 +249,17 @@
    letter-spacing: -0.2px;
  }
 
+.location-category-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
 .location, .category, .views {
    display: flex;
    align-items: center;
-   margin-bottom: 5px;
    color: var(--mat-sys-on-surface-variant);
    font-size: 0.9rem;
  }
@@ -212,6 +282,23 @@
    color: var(--mat-sys-on-surface-variant);
  }
 
+.contact-actions {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.contact-actions button {
+  width: 32px;
+  height: 32px;
+}
+
+.contact-actions button mat-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+}
+
 .no-products {
    text-align: center;
    padding: 50px;
@@ -231,6 +318,19 @@
 
 .no-products p {
   margin: 0;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+
+
+.pagination-container ::ng-deep .mat-mdc-paginator-container {
+  justify-content: center;
 }
 
 @media (max-width: 768px) {

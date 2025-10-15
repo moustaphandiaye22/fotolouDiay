@@ -7,15 +7,20 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 /* Global styles for FotoLouJay - Modern UX Design */
 .app-container {
    min-height: 100vh;
+   display: flex;
+   flex-direction: column;
    background-color: #f8f9fa;
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    line-height: 1.6;
  }
 
 .main-content {
+  flex: 1;
+  width: 100%;
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .card {
@@ -210,7 +215,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .footer {
    background-color: var(--mat-sys-surface);
    padding: 30px 0;
-   margin-top: 50px;
+   margin-top: auto;
+   width: 100%;
    text-align: center;
    color: var(--mat-sys-on-surface);
    border-top: 1px solid var(--mat-sys-outline-variant);

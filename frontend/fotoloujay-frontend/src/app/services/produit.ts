@@ -1,13 +1,21 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Product, ProductStats, CreateProductData, UpdateProductData } from '../models';
+import {
+  Product,
+  ProductStats,
+  CreateProductData,
+  UpdateProductData,
+  PaymentInitiationRequest,
+  PaymentInitiationResponse
+} from '../models';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProduitService {
   private apiUrl = 'http://localhost:2025/api/produits';
+  private paiementsUrl = 'http://localhost:2025/api/paiements';
 
   constructor(private http: HttpClient) {}
 
@@ -82,5 +90,12 @@ export class ProduitService {
     const token = localStorage.getItem('token');
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     return this.http.put(`${this.apiUrl}/${id}/rejeter`, {}, { headers });
+  }
+
+  initierPaiement(request: PaymentInitiationRequest): Observable<PaymentInitiationResponse> {
+    const token = localStorage.getItem('token');
+    const headers = token ? new HttpHeaders().set('Authorization', `Bearer ${token}`) : undefined;
+    const options = headers ? { headers } : {};
+    return this.http.post<PaymentInitiationResponse>(`${this.paiementsUrl}/initier`, request, options);
   }
 }

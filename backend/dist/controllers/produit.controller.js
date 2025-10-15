@@ -49,19 +49,6 @@ class ControleurProduit {
                 }
                 // Support des deux formats : ancien (titre) et nouveau (nom)
                 const { titre, nom, description, prix, localisation, estVip, sourceType, securityLevel } = req.body;
-                // Validation de sécurité pour les photos authentiques
-                if (sourceType && sourceType !== 'camera_capture_only') {
-                    return res.status(400).json({
-                        success: false,
-                        message: 'Source de photo non autorisée. Utilisez uniquement l\'appareil photo.'
-                    });
-                }
-                if (securityLevel && securityLevel !== 'authenticated_photos') {
-                    return res.status(400).json({
-                        success: false,
-                        message: 'Niveau de sécurité insuffisant pour les photos.'
-                    });
-                }
                 const imageUrl = (photoFile === null || photoFile === void 0 ? void 0 : photoFile.path) || ((_d = req.file) === null || _d === void 0 ? void 0 : _d.path) || req.body.imageUrl || '';
                 const fullImageUrl = imageUrl.startsWith('http') ? imageUrl : `http://localhost:${process.env.PORT || 2025}/${imageUrl}`;
                 const donneesProduit = {

@@ -52,6 +52,9 @@ const verifierToken = (req, res, next) => __awaiter(void 0, void 0, void 0, func
             select: {
                 id: true,
                 email: true,
+                nom: true,
+                prenom: true,
+                telephone: true,
                 role: true,
                 estActif: true
             }
@@ -66,6 +69,9 @@ const verifierToken = (req, res, next) => __awaiter(void 0, void 0, void 0, func
         req.utilisateur = {
             id: utilisateur.id,
             email: utilisateur.email,
+            nom: utilisateur.nom,
+            prenom: utilisateur.prenom,
+            telephone: utilisateur.telephone,
             role: utilisateur.role
         };
         next();
@@ -124,6 +130,9 @@ const authentificationOptionnelle = (req, res, next) => __awaiter(void 0, void 0
             select: {
                 id: true,
                 email: true,
+                nom: true,
+                prenom: true,
+                telephone: true,
                 role: true
             }
         });
@@ -131,6 +140,9 @@ const authentificationOptionnelle = (req, res, next) => __awaiter(void 0, void 0
             req.utilisateur = {
                 id: utilisateur.id,
                 email: utilisateur.email,
+                nom: utilisateur.nom,
+                prenom: utilisateur.prenom,
+                telephone: utilisateur.telephone,
                 role: utilisateur.role
             };
         }

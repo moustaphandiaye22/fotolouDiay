@@ -9,7 +9,6 @@ const express_1 = require("express");
 const multer_1 = __importDefault(require("multer"));
 const produit_controller_1 = require("../controllers/produit.controller");
 const auth_middleware_1 = require("../middlewares/auth.middleware");
-const security_middleware_1 = require("../middlewares/security.middleware");
 const message_1 = require("../enums/message");
 const auth_validator_1 = require("../validators/auth.validator");
 exports.routesProduit = (0, express_1.Router)();
@@ -80,10 +79,10 @@ exports.routesProduit.get('/mes-produits', auth_middleware_1.verifierToken, prod
  * @desc Créer un nouveau produit avec photos capturées uniquement - SÉCURISÉ
  * @access Private
  */
-exports.routesProduit.post('/', security_middleware_1.loggerSecurite, auth_middleware_1.verifierToken, upload.fields([
+exports.routesProduit.post('/', auth_middleware_1.verifierToken, upload.fields([
     { name: 'photo', maxCount: 1 },
     { name: 'photosSupplementaires', maxCount: 7 }
-]), security_middleware_1.validerSecuritePhotos, auth_validator_1.validationProduit, produit_controller_1.ControleurProduit.creer);
+]), auth_validator_1.validationProduit, produit_controller_1.ControleurProduit.creer);
 /**
  * @route GET /api/produits
  * @desc Récupérer tous les produits (avec filtres) - Pour modérateurs/admins

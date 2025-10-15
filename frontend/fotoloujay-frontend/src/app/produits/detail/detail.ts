@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
@@ -7,9 +7,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDialogModule, MatDialog } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
+import { MatRadioModule } from '@angular/material/radio';
 import { ProduitService } from '../../services/produit';
 import { AuthService } from '../../services/auth';
-import { Product, RoleUtilisateur } from '../../models';
+import { Product, RoleUtilisateur, PaymentProvider, PaymentInitiationRequest } from '../../models';
+import { PaymentDialog } from './payment-dialog';
 
 @Component({
   selector: 'app-detail',
@@ -32,6 +36,8 @@ export class Detail implements OnInit {
   currentUser: any = null;
   isOwner = false;
   canModerate = false;
+  isProcessingPayment = false;
+  paymentError = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -143,6 +149,62 @@ export class Detail implements OnInit {
         }
       });
     }
+  }
+
+  acheterProduit() {
+    if (!this.produit || this.isProcessingPayment) {
+      return;
+    }
+
+    this.paymentError = '';
+
+    const dialogRef = this.dialog.open(PaymentDialog, {
+      data: { produit: this.produit }
+    });
+
+    dialogRef.afterClosed().subscribe((provider?: PaymentProvider) => {
+      if (provider) {
+        this.initierPaiement(provider);
+      }
+    });
+  }
+
+  private initierPaiement(provider: PaymentProvider) {
+    if (!this.produit) {
+      return;
+    }
+
+    this.isProcessingPayment = true;
+    this.paymentError = '';
+
+    const request: PaymentInitiationRequest = {
+      produitId: this.produit.id,
+      montant: this.produit.prix,
+      prestataire: provider,
+      callbackUrl: `${window.location.origin}/paiements/callback`
+    };
+
+    this.produitService.initierPaiement(request).subscribe({
+      next: (response) => {
+        this.isProcessingPayment = false;
+
+        if (response.success && response.redirectUrl) {
+          window.location.href = response.redirectUrl;
+          return;
+        }
+
+        if (response.success && response.paymentReference) {
+          this.paymentError = 'Paiement initié. Veuillez suivre les instructions reçues.';
+          return;
+        }
+
+        this.paymentError = response.message || "Impossible d'initialiser le paiement.";
+      },
+      error: (error) => {
+        this.isProcessingPayment = false;
+        this.paymentError = error.error?.message || "Erreur lors de l'initialisation du paiement.";
+      }
+    });
   }
 
   formatPrix(prix: number): string {

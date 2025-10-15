@@ -1,6 +1,12 @@
 <div class="notifications-container">
   <div class="notifications-header">
-    <h1><mat-icon>notifications</mat-icon> Mes Notifications</h1>
+    <div class="header-main">
+      <button mat-stroked-button type="button" class="back-button" (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon>
+        Retour
+      </button>
+      <h1><mat-icon>notifications</mat-icon> Mes Notifications</h1>
+    </div>
     <div class="header-info">
       <span *ngIf="unreadNotifications.length > 0" class="unread-count">
         {{ unreadNotifications.length }} notification{{ unreadNotifications.length > 1 ? 's' : '' }} non lue{{ unreadNotifications.length > 1 ? 's' : '' }}
@@ -25,60 +31,16 @@
       </button>
     </div>
 
-    <!-- Notifications non lues -->
-    <div class="section" *ngIf="unreadNotifications.length > 0">
-      <h2><mat-icon>mail</mat-icon> Non lues ({{ unreadNotifications.length }})</h2>
-      <div class="notifications-list">
-        <div
-          *ngFor="let notification of unreadNotifications"
-          class="notification-card unread"
-          (click)="markAsRead(notification)">
-          <div class="notification-icon">
-            {{ getNotificationIcon(notification.type) }}
-          </div>
-
-          <div class="notification-content">
-            <div class="notification-header">
-              <h4>{{ notification.titre }}</h4>
-              <span class="notification-type" [style.background-color]="getNotificationColor(notification.type)">
-                {{ getNotificationTypeLabel(notification.type) }}
-              </span>
-            </div>
-
-            <p class="notification-message">{{ notification.message }}</p>
-
-            <div class="notification-footer">
-              <span class="notification-date">{{ formatDate(notification.dateCreation) }}</span>
-              <div class="notification-actions">
-                <button class="btn-icon" (click)="markAsRead(notification); $event.stopPropagation()" title="Marquer comme lu">
-                  <mat-icon>visibility</mat-icon>
-                </button>
-                <button class="btn-icon delete" (click)="deleteNotification(notification); $event.stopPropagation()" title="Supprimer">
-                  <mat-icon>delete</mat-icon>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Message si aucune notification non lue -->
-    <div *ngIf="unreadNotifications.length === 0" class="no-notifications">
-      <mat-icon>check_circle</mat-icon>
-      <h3>Aucune notification non lue</h3>
-      <p>Vous êtes à jour !</p>
-    </div>
-
     <!-- Toutes les notifications -->
     <div class="section" *ngIf="notifications.length > 0">
-      <h2><mat-icon>list</mat-icon> Toutes les notifications ({{ notifications.length }})</h2>
+      <h2><mat-icon>notifications</mat-icon> Notifications ({{ notifications.length }})</h2>
       <div class="notifications-list">
         <div
           *ngFor="let notification of notifications"
           class="notification-card"
           [class.read]="notification.estLue"
-          [class.unread]="!notification.estLue">
+          [class.unread]="!notification.estLue"
+          (click)="markAsRead(notification)">
 
           <div class="notification-icon">
             {{ getNotificationIcon(notification.type) }}
@@ -103,11 +65,11 @@
                 <button
                   class="btn-icon"
                   *ngIf="!notification.estLue"
-                  (click)="markAsRead(notification)"
+                  (click)="markAsRead(notification); $event.stopPropagation()"
                   title="Marquer comme lu">
                   <mat-icon>visibility</mat-icon>
                 </button>
-                <button class="btn-icon delete" (click)="deleteNotification(notification)" title="Supprimer">
+                <button class="btn-icon delete" (click)="deleteNotification(notification); $event.stopPropagation()" title="Supprimer">
                   <mat-icon>delete</mat-icon>
                 </button>
               </div>
