@@ -1,0 +1,146 @@
+<div class="public-container">
+  <div class="header">
+    <h1>Produits Disponibles</h1>
+    <div class="filter-buttons">
+      <button
+        mat-raised-button
+        color="primary"
+        [class.active]="!showVipOnly"
+        (click)="toggleVipFilter()">
+        <mat-icon>shopping_bag</mat-icon>
+        Tous les produits
+      </button>
+      <button
+        mat-raised-button
+        color="accent"
+        [class.active]="showVipOnly"
+        (click)="toggleVipFilter()">
+        <mat-icon>star</mat-icon>
+        Produits VIP
+      </button>
+    </div>
+  </div>
+
+  <div class="search-filters">
+    <div class="search-bar">
+      <mat-form-field appearance="outline" class="search-field">
+        <mat-label>Rechercher un produit</mat-label>
+        <input
+          matInput
+          [(ngModel)]="searchTerm"
+          (ngModelChange)="appliquerFiltres()"
+          placeholder="Titre, description...">
+        <mat-icon matPrefix>search</mat-icon>
+      </mat-form-field>
+    </div>
+
+    <div class="filters-row">
+      <mat-form-field appearance="outline" class="filter-field">
+        <mat-label>Catégorie</mat-label>
+        <mat-select [(ngModel)]="selectedCategorie" (ngModelChange)="appliquerFiltres()">
+          <mat-option value="">Toutes les catégories</mat-option>
+          <mat-option *ngFor="let cat of categories" [value]="cat">{{ cat }}</mat-option>
+        </mat-select>
+        <mat-icon matPrefix>category</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="filter-field">
+        <mat-label>Localisation</mat-label>
+        <mat-select [(ngModel)]="selectedLocalisation" (ngModelChange)="appliquerFiltres()">
+          <mat-option value="">Toutes les localisations</mat-option>
+          <mat-option *ngFor="let loc of localisations" [value]="loc">{{ loc }}</mat-option>
+        </mat-select>
+        <mat-icon matPrefix>location_on</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="filter-field price-field">
+        <mat-label>Prix min</mat-label>
+        <input
+          matInput
+          type="number"
+          [(ngModel)]="prixMin"
+          (ngModelChange)="appliquerFiltres()"
+          placeholder="0">
+        <mat-icon matPrefix>attach_money</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="filter-field price-field">
+        <mat-label>Prix max</mat-label>
+        <input
+          matInput
+          type="number"
+          [(ngModel)]="prixMax"
+          (ngModelChange)="appliquerFiltres()"
+          placeholder="1000000">
+        <mat-icon matPrefix>attach_money</mat-icon>
+      </mat-form-field>
+
+      <button mat-raised-button color="warn" (click)="resetFiltres()" class="reset-btn">
+        <mat-icon>clear</mat-icon>
+        Réinitialiser
+      </button>
+    </div>
+  </div>
+
+  <div *ngIf="isLoading" class="loading-container">
+    <mat-spinner></mat-spinner>
+    <p>Chargement des produits...</p>
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">
+    <mat-icon>error</mat-icon>
+    {{ errorMessage }}
+  </div>
+
+  <div class="products-grid" *ngIf="!isLoading && !errorMessage">
+    <mat-card
+      *ngFor="let produit of getProduitsAffiches()"
+      class="product-card"
+      [routerLink]="['/produits', produit.id]">
+      <div class="product-image">
+        <img [src]="produit.imageUrl" [alt]="produit.titre" />
+        <div class="product-status" *ngIf="produit.estVip">
+          <mat-chip color="accent">VIP</mat-chip>
+        </div>
+      </div>
+
+      <mat-card-content class="product-info">
+        <mat-card-title>{{ produit.titre }}</mat-card-title>
+        <p class="product-description">{{ produit.description }}</p>
+
+        <div class="product-details">
+          <div class="price">
+            <strong>{{ formatPrix(produit.prix) }}</strong>
+          </div>
+          <div class="location" *ngIf="produit.localisation">
+            <mat-icon>location_on</mat-icon>
+            {{ produit.localisation }}
+          </div>
+          <div class="category" *ngIf="produit.categorie">
+            <mat-icon>category</mat-icon>
+            {{ produit.categorie }}
+          </div>
+          <div class="views">
+            <mat-icon>visibility</mat-icon>
+            {{ produit.vues }} vues
+          </div>
+        </div>
+
+        <div class="product-footer">
+          <div class="user-info">
+            <small>Publié par {{ produit.utilisateur?.nom }} {{ produit.utilisateur?.prenom }}</small>
+          </div>
+          <div class="date">
+            <small>{{ produit.dateCreation | date:'dd/MM/yyyy' }}</small>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div *ngIf="!isLoading && !errorMessage && getProduitsAffiches().length === 0" class="no-products">
+    <mat-icon>inventory</mat-icon>
+    <h3>Aucun produit trouvé</h3>
+    <p>{{ showVipOnly ? 'Aucun produit VIP disponible pour le moment.' : 'Aucun produit disponible pour le moment.' }}</p>
+  </div>
+</div>

@@ -1,0 +1,80 @@
+<div class="app-container">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="main-content">
+      <div class="nav-links">
+        <a [routerLink]="['/']" class="navbar-brand">FotoLouJay</a>
+        <a [routerLink]="['/produits']" class="nav-link">Produits</a>
+
+        <!-- Show login/register when not authenticated -->
+        <ng-container *ngIf="!isLoggedIn">
+          <a [routerLink]="['/auth/login']" class="nav-link">Connexion</a>
+          <a [routerLink]="['/auth/register']" class="nav-link">Inscription</a>
+        </ng-container>
+
+        <!-- Show main navigation when authenticated -->
+        <ng-container *ngIf="isLoggedIn && currentUser">
+          <!-- Add Product Button -->
+          <button
+            mat-raised-button
+            color="primary"
+            [routerLink]="['/produits/create']"
+            class="nav-button">
+            <span>Ajouter un Produit</span>
+          </button>
+
+          <!-- Notifications Icon with Badge -->
+          <button
+            mat-icon-button
+            [routerLink]="['/notifications']"
+            class="notification-button"
+            *ngIf="currentUser.role !== 'UTILISATEUR'"
+            title="Notifications">
+            <mat-icon>notifications</mat-icon>
+            <span class="notification-badge" *ngIf="unreadNotificationsCount > 0">
+              {{ unreadNotificationsCount }}
+            </span>
+          </button>
+
+          <!-- User Menu -->
+          <div class="user-menu">
+            <div class="user-info">
+              <span class="user-name">{{ currentUser.prenom || '' }} {{ currentUser.nom }}</span>
+              <span class="user-role" *ngIf="currentUser.role">({{ getRoleLabel(currentUser.role) }})</span>
+            </div>
+            <div class="user-dropdown">
+              <button class="dropdown-toggle" (click)="toggleUserMenu()">
+                <span class="user-avatar">{{ getUserInitials() }}</span>
+              </button>
+              <div class="dropdown-menu" [class.show]="showUserMenu">
+                <a [routerLink]="['/profil']" class="dropdown-item" (click)="toggleUserMenu()">
+                  <mat-icon>person</mat-icon> Mon Profil
+                </a>
+                <a [routerLink]="['/produits/mes-produits']" class="dropdown-item" (click)="toggleUserMenu()">
+                  <mat-icon>inventory_2</mat-icon> Mes Produits
+                </a>
+                <a [routerLink]="['/moderation']" class="dropdown-item" *ngIf="currentUser.role === 'MODERATEUR' || currentUser.role === 'ADMINISTRATEUR'" (click)="toggleUserMenu()">
+                  <mat-icon>admin_panel_settings</mat-icon> Modération
+                </a>
+                <hr class="dropdown-divider" *ngIf="currentUser.role === 'MODERATEUR' || currentUser.role === 'ADMINISTRATEUR'">
+                <button class="dropdown-item logout-btn" (click)="logout()">
+                  <mat-icon>logout</mat-icon> Déconnexion
+                </button>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <router-outlet />
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 FotoLouJay - Plateforme de vente en ligne</p>
+  </footer>
+</div>

@@ -1,0 +1,53 @@
+<div class="auth-form">
+  <h2>Inscription</h2>
+  <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+    <mat-form-field class="form-field">
+      <mat-label>Nom</mat-label>
+      <input matInput [(ngModel)]="registerData.nom" name="nom" required>
+      <mat-error *ngIf="registerForm.submitted && registerForm.controls['nom']?.invalid">
+        Nom requis
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-label>Prénom</mat-label>
+      <input matInput [(ngModel)]="registerData.prenom" name="prenom">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" [(ngModel)]="registerData.email" name="email" required>
+      <mat-error *ngIf="registerForm.submitted && registerForm.controls['email']?.invalid">
+        Email requis et valide
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-label>Téléphone</mat-label>
+      <input matInput [(ngModel)]="registerData.telephone" name="telephone">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-label>Mot de passe</mat-label>
+      <input matInput type="password" [(ngModel)]="registerData.motDePasse" name="motDePasse" required>
+      <mat-error *ngIf="registerForm.submitted && registerForm.controls['motDePasse']?.invalid">
+        Mot de passe requis (min 6 caractères, 1 majuscule, 1 minuscule, 1 chiffre)
+      </mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="isLoading" class="btn-primary">
+      <mat-spinner diameter="20" *ngIf="isLoading"></mat-spinner>
+      {{ isLoading ? 'Inscription...' : 'S\'inscrire' }}
+    </button>
+
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+
+    <div *ngIf="successMessage" class="success-message">
+      {{ successMessage }}
+    </div>
+  </form>
+
+  <p>Déjà un compte ? <a routerLink="/auth/login">Se connecter</a></p>
+</div>

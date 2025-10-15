@@ -1,0 +1,255 @@
+<div class="profil-container">
+  <div *ngIf="isLoading && !user" class="loading-container">
+    <mat-spinner></mat-spinner>
+    <p>Chargement du profil...</p>
+  </div>
+
+  <div *ngIf="user && !isLoading" class="profil-content">
+    <div class="profil-header">
+      <div class="user-avatar">
+        <mat-icon>person</mat-icon>
+      </div>
+      <div class="user-info">
+        <h1>{{ user.prenom || '' }} {{ user.nom }}</h1>
+        <p class="user-email">{{ user.email }}</p>
+        <mat-chip [color]="user.role === 'ADMINISTRATEUR' ? 'accent' : user.role === 'MODERATEUR' ? 'primary' : 'basic'">
+          {{ getRoleLabel(user.role) }}
+        </mat-chip>
+      </div>
+    </div>
+
+    <mat-tab-group class="profil-tabs">
+      <!-- Informations personnelles -->
+      <mat-tab label="Informations personnelles">
+        <div class="tab-content">
+          <form [formGroup]="profileForm" (ngSubmit)="updateProfile()">
+            <mat-card>
+              <mat-card-header>
+                <mat-card-title>Mes informations</mat-card-title>
+              </mat-card-header>
+
+              <mat-card-content>
+                <div class="form-row">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Nom</mat-label>
+                    <input matInput formControlName="nom" required>
+                    <mat-error *ngIf="profileForm.get('nom')?.hasError('required')">
+                      Le nom est requis
+                    </mat-error>
+                    <mat-error *ngIf="profileForm.get('nom')?.hasError('minlength')">
+                      Le nom doit contenir au moins 2 caractères
+                    </mat-error>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="outline">
+                    <mat-label>Prénom</mat-label>
+                    <input matInput formControlName="prenom">
+                  </mat-form-field>
+                </div>
+
+                <div class="form-row">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" type="email" required>
+                    <mat-error *ngIf="profileForm.get('email')?.hasError('required')">
+                      L'email est requis
+                    </mat-error>
+                    <mat-error *ngIf="profileForm.get('email')?.hasError('email')">
+                      Format d'email invalide
+                    </mat-error>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="outline">
+                    <mat-label>Téléphone</mat-label>
+                    <input matInput formControlName="telephone">
+                  </mat-form-field>
+                </div>
+              </mat-card-content>
+
+              <mat-card-actions>
+                <button mat-raised-button color="primary" type="submit" [disabled]="profileForm.invalid || isLoading">
+                  <mat-icon>save</mat-icon>
+                  Mettre à jour
+                </button>
+              </mat-card-actions>
+            </mat-card>
+          </form>
+        </div>
+      </mat-tab>
+
+      <!-- Sécurité -->
+      <mat-tab label="Sécurité">
+        <div class="tab-content">
+          <form [formGroup]="passwordForm" (ngSubmit)="changePassword()">
+            <mat-card>
+              <mat-card-header>
+                <mat-card-title>Changer le mot de passe</mat-card-title>
+              </mat-card-header>
+
+              <mat-card-content>
+                <mat-form-field appearance="outline" class="full-width">
+                  <mat-label>Ancien mot de passe</mat-label>
+                  <input matInput formControlName="ancienMotDePasse" type="password" required>
+                  <mat-error *ngIf="passwordForm.get('ancienMotDePasse')?.hasError('required')">
+                    L'ancien mot de passe est requis
+                  </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="full-width">
+                  <mat-label>Nouveau mot de passe</mat-label>
+                  <input matInput formControlName="nouveauMotDePasse" type="password" required>
+                  <mat-error *ngIf="passwordForm.get('nouveauMotDePasse')?.hasError('required')">
+                    Le nouveau mot de passe est requis
+                  </mat-error>
+                  <mat-error *ngIf="passwordForm.get('nouveauMotDePasse')?.hasError('minlength')">
+                    Le mot de passe doit contenir au moins 6 caractères
+                  </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="full-width">
+                  <mat-label>Confirmer le nouveau mot de passe</mat-label>
+                  <input matInput formControlName="confirmerMotDePasse" type="password" required>
+                  <mat-error *ngIf="passwordForm.get('confirmerMotDePasse')?.hasError('required')">
+                    La confirmation du mot de passe est requise
+                  </mat-error>
+                  <mat-error *ngIf="passwordForm.hasError('passwordMismatch')">
+                    Les mots de passe ne correspondent pas
+                  </mat-error>
+                </mat-form-field>
+              </mat-card-content>
+
+              <mat-card-actions>
+                <button mat-raised-button color="primary" type="submit" [disabled]="passwordForm.invalid || isLoading">
+                  <mat-icon>lock</mat-icon>
+                  Changer le mot de passe
+                </button>
+              </mat-card-actions>
+            </mat-card>
+          </form>
+        </div>
+      </mat-tab>
+
+      <!-- Mes produits -->
+      <mat-tab label="Mes produits">
+        <div class="tab-content">
+          <div class="products-section">
+            <div class="section-header">
+              <h3>Mes produits ({{ userProducts.length }})</h3>
+              <button mat-raised-button color="primary" (click)="navigateToCreateProduct()">
+                <mat-icon>add</mat-icon>
+                Nouveau produit
+              </button>
+            </div>
+
+            <div *ngIf="isLoadingProducts" class="loading-container">
+              <mat-spinner></mat-spinner>
+              <p>Chargement de vos produits...</p>
+            </div>
+
+            <div *ngIf="!isLoadingProducts && userProducts.length === 0" class="no-products">
+              <mat-icon>inventory</mat-icon>
+              <h4>Aucun produit</h4>
+              <p>Vous n'avez pas encore publié de produit.</p>
+              <button mat-raised-button color="primary" (click)="navigateToCreateProduct()">
+                Publier mon premier produit
+              </button>
+            </div>
+
+            <div class="products-grid" *ngIf="!isLoadingProducts && userProducts.length > 0">
+              <mat-card *ngFor="let product of userProducts" class="product-card">
+                <div class="product-image">
+                  <img [src]="product.imageUrl" [alt]="product.titre" />
+                  <div class="product-status">
+                    <mat-chip [color]="product.estVip ? 'accent' : 'basic'">
+                      {{ product.estVip ? 'VIP' : 'Standard' }}
+                    </mat-chip>
+                    <mat-chip [color]="getStatutColor(product.statut)">
+                      {{ getStatutLabel(product.statut) }}
+                    </mat-chip>
+                  </div>
+                </div>
+
+                <mat-card-content>
+                  <mat-card-title>{{ product.titre }}</mat-card-title>
+                  <p class="product-description">{{ product.description }}</p>
+                  <div class="product-details">
+                    <div class="price">{{ formatPrix(product.prix) }}</div>
+                    <div class="views">{{ product.vues }} vues</div>
+                  </div>
+                </mat-card-content>
+
+                <mat-card-actions>
+                  <button mat-button (click)="editProduct(product)">
+                    <mat-icon>edit</mat-icon>
+                    Modifier
+                  </button>
+                  <button mat-button color="warn" (click)="deleteProduct(product)">
+                    <mat-icon>delete</mat-icon>
+                    Supprimer
+                  </button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+
+      <!-- Statistiques -->
+      <mat-tab label="Statistiques">
+        <div class="tab-content">
+          <div class="stats-section" *ngIf="productStats">
+            <div class="stats-grid">
+              <mat-card class="stat-card">
+                <mat-card-content>
+                  <div class="stat-value">{{ productStats.totalProduits }}</div>
+                  <div class="stat-label">Total produits</div>
+                </mat-card-content>
+              </mat-card>
+
+              <mat-card class="stat-card">
+                <mat-card-content>
+                  <div class="stat-value">{{ productStats.produitsValides }}</div>
+                  <div class="stat-label">Produits validés</div>
+                </mat-card-content>
+              </mat-card>
+
+              <mat-card class="stat-card">
+                <mat-card-content>
+                  <div class="stat-value">{{ productStats.produitsEnAttente }}</div>
+                  <div class="stat-label">En attente</div>
+                </mat-card-content>
+              </mat-card>
+
+              <mat-card class="stat-card">
+                <mat-card-content>
+                  <div class="stat-value">{{ productStats.produitsVips }}</div>
+                  <div class="stat-label">Produits VIP</div>
+                </mat-card-content>
+              </mat-card>
+
+              <mat-card class="stat-card">
+                <mat-card-content>
+                  <div class="stat-value">{{ productStats.vuesTotales }}</div>
+                  <div class="stat-label">Vues totales</div>
+                </mat-card-content>
+              </mat-card>
+            </div>
+          </div>
+
+          <div *ngIf="isLoadingStats" class="loading-container">
+            <mat-spinner></mat-spinner>
+            <p>Chargement des statistiques...</p>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+
+    <!-- Actions -->
+    <div class="profil-actions">
+      <button mat-raised-button color="warn" (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        Se déconnecter
+      </button>
+    </div>
+  </div>
+</div>

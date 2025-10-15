@@ -1,0 +1,176 @@
+<div class="moderation-container">
+  <div class="moderation-header">
+    <h1>
+      <mat-icon>admin_panel_settings</mat-icon>
+      Panneau de Modération
+    </h1>
+    <p class="header-subtitle">Gérez les produits en attente de validation</p>
+  </div>
+
+  <div *ngIf="isLoading" class="loading-container">
+    <mat-spinner></mat-spinner>
+    <p>Chargement des produits...</p>
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">
+    <mat-icon>error</mat-icon>
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="!isLoading && !errorMessage" class="moderation-content">
+    <mat-tab-group class="moderation-tabs" [(selectedIndex)]="selectedTab">
+      <!-- Produits en attente -->
+      <mat-tab>
+        <ng-template mat-tab-label>
+          En attente ({{ getTabCount(0) }})
+        </ng-template>
+
+        <div class="tab-content">
+          <div *ngIf="produitsEnAttente.length === 0" class="no-products">
+            <mat-icon>check_circle</mat-icon>
+            <h3>Aucun produit en attente</h3>
+            <p>Tous les produits ont été traités !</p>
+          </div>
+
+          <div class="products-grid" *ngIf="produitsEnAttente.length > 0">
+            <mat-card *ngFor="let produit of produitsEnAttente" class="product-card pending">
+              <div class="product-image">
+                <img [src]="produit.imageUrl" [alt]="produit.titre" />
+                <div class="product-status">
+                  <mat-chip color="accent">En attente</mat-chip>
+                </div>
+              </div>
+
+              <mat-card-content>
+                <mat-card-title>{{ produit.titre }}</mat-card-title>
+                <p class="product-description">{{ produit.description }}</p>
+
+                <div class="product-details">
+                  <div class="price">{{ formatPrix(produit.prix) }}</div>
+                  <div class="user-info">
+                    Par {{ produit.utilisateur?.nom }} {{ produit.utilisateur?.prenom }}
+                  </div>
+                  <div class="date">
+                    Publié le {{ produit.dateCreation | date:'dd/MM/yyyy' }}
+                  </div>
+                </div>
+              </mat-card-content>
+
+              <mat-card-actions>
+                <button mat-raised-button color="primary" (click)="viewProduit(produit)">
+                  <mat-icon>visibility</mat-icon>
+                  Voir détails
+                </button>
+                <button mat-raised-button color="primary" (click)="validerProduit(produit)">
+                  <mat-icon>check_circle</mat-icon>
+                  Valider
+                </button>
+                <button mat-raised-button color="warn" (click)="rejeterProduit(produit)">
+                  <mat-icon>cancel</mat-icon>
+                  Rejeter
+                </button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+      </mat-tab>
+
+      <!-- Produits validés -->
+      <mat-tab>
+        <ng-template mat-tab-label>
+          Validés ({{ getTabCount(1) }})
+        </ng-template>
+
+        <div class="tab-content">
+          <div *ngIf="produitsValides.length === 0" class="no-products">
+            <mat-icon>inventory</mat-icon>
+            <h3>Aucun produit validé</h3>
+            <p>Les produits validés apparaîtront ici.</p>
+          </div>
+
+          <div class="products-grid" *ngIf="produitsValides.length > 0">
+            <mat-card *ngFor="let produit of produitsValides" class="product-card approved">
+              <div class="product-image">
+                <img [src]="produit.imageUrl" [alt]="produit.titre" />
+                <div class="product-status">
+                  <mat-chip color="primary">Validé</mat-chip>
+                  <mat-chip *ngIf="produit.estVip" color="accent">VIP</mat-chip>
+                </div>
+              </div>
+
+              <mat-card-content>
+                <mat-card-title>{{ produit.titre }}</mat-card-title>
+                <p class="product-description">{{ produit.description }}</p>
+
+                <div class="product-details">
+                  <div class="price">{{ formatPrix(produit.prix) }}</div>
+                  <div class="user-info">
+                    Par {{ produit.utilisateur?.nom }} {{ produit.utilisateur?.prenom }}
+                  </div>
+                  <div class="stats">
+                    <span>{{ produit.vues }} vues</span>
+                  </div>
+                </div>
+              </mat-card-content>
+
+              <mat-card-actions>
+                <button mat-stroked-button (click)="viewProduit(produit)">
+                  <mat-icon>visibility</mat-icon>
+                  Voir détails
+                </button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+      </mat-tab>
+
+      <!-- Produits rejetés -->
+      <mat-tab>
+        <ng-template mat-tab-label>
+          Rejetés ({{ getTabCount(2) }})
+        </ng-template>
+
+        <div class="tab-content">
+          <div *ngIf="produitsRejetes.length === 0" class="no-products">
+            <mat-icon>thumb_up</mat-icon>
+            <h3>Aucun produit rejeté</h3>
+            <p>Excellente modération !</p>
+          </div>
+
+          <div class="products-grid" *ngIf="produitsRejetes.length > 0">
+            <mat-card *ngFor="let produit of produitsRejetes" class="product-card rejected">
+              <div class="product-image">
+                <img [src]="produit.imageUrl" [alt]="produit.titre" />
+                <div class="product-status">
+                  <mat-chip color="warn">Rejeté</mat-chip>
+                </div>
+              </div>
+
+              <mat-card-content>
+                <mat-card-title>{{ produit.titre }}</mat-card-title>
+                <p class="product-description">{{ produit.description }}</p>
+
+                <div class="product-details">
+                  <div class="price">{{ formatPrix(produit.prix) }}</div>
+                  <div class="user-info">
+                    Par {{ produit.utilisateur?.nom }} {{ produit.utilisateur?.prenom }}
+                  </div>
+                  <div class="date">
+                    Publié le {{ produit.dateCreation | date:'dd/MM/yyyy' }}
+                  </div>
+                </div>
+              </mat-card-content>
+
+              <mat-card-actions>
+                <button mat-stroked-button (click)="viewProduit(produit)">
+                  <mat-icon>visibility</mat-icon>
+                  Voir détails
+                </button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="auth-form">
+  <h2>Connexion</h2>
+  <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <mat-form-field class="form-field">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" [(ngModel)]="loginData.email" name="email" required>
+      <mat-error *ngIf="loginForm.submitted && loginForm.controls['email']?.invalid">
+        Email requis et valide
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-label>Mot de passe</mat-label>
+      <input matInput type="password" [(ngModel)]="loginData.motDePasse" name="motDePasse" required>
+      <mat-error *ngIf="loginForm.submitted && loginForm.controls['motDePasse']?.invalid">
+        Mot de passe requis
+      </mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="isLoading" class="btn-primary">
+      <mat-spinner diameter="20" *ngIf="isLoading"></mat-spinner>
+      {{ isLoading ? 'Connexion...' : 'Se connecter' }}
+    </button>
+
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+
+    <div *ngIf="successMessage" class="success-message">
+      {{ successMessage }}
+    </div>
+  </form>
+
+  <p>Pas encore de compte ? <a routerLink="/auth/register">S'inscrire</a></p>
+</div>

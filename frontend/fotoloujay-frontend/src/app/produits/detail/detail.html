@@ -1,0 +1,152 @@
+<div class="detail-container">
+  <button mat-raised-button class="back-button" (click)="goBackToProducts()">
+    <mat-icon>arrow_back</mat-icon>
+    Retour aux produits
+  </button>
+
+  <div *ngIf="isLoading" class="loading-container">
+    <mat-spinner></mat-spinner>
+    <p>Chargement du produit...</p>
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">
+    <mat-icon>error</mat-icon>
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="!isLoading && !errorMessage && produit" class="product-detail">
+    <div class="product-image-container">
+      <img [src]="produit.imageUrl" [alt]="produit.titre" />
+      <div class="product-badge" *ngIf="produit.estVip">
+        <mat-icon>star</mat-icon>
+        <span>VIP</span>
+      </div>
+    </div>
+
+    <div class="product-content">
+      <div class="product-header">
+        <div class="product-title-section">
+          <h1>{{ produit.titre }}</h1>
+          <mat-chip [color]="getStatutColor(produit.statut)" class="status-chip">
+            {{ getStatutLabel(produit.statut) }}
+          </mat-chip>
+        </div>
+        <div class="product-price">
+          <span class="price-label">Prix</span>
+          <span class="price-value">{{ formatPrix(produit.prix) }}</span>
+        </div>
+      </div>
+
+      <div class="product-description">
+        <h3><mat-icon>description</mat-icon> Description</h3>
+        <p>{{ produit.description }}</p>
+      </div>
+
+      <div class="product-info-grid">
+        <div class="info-card" *ngIf="produit.localisation">
+          <mat-icon>location_on</mat-icon>
+          <div class="info-content">
+            <span class="info-label">Localisation</span>
+            <span class="info-value">{{ produit.localisation }}</span>
+          </div>
+        </div>
+
+        <div class="info-card" *ngIf="produit.categorie">
+          <mat-icon>category</mat-icon>
+          <div class="info-content">
+            <span class="info-label">Catégorie</span>
+            <span class="info-value">{{ produit.categorie }}</span>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <mat-icon>visibility</mat-icon>
+          <div class="info-content">
+            <span class="info-label">Vues</span>
+            <span class="info-value">{{ produit.vues }}</span>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <mat-icon>event</mat-icon>
+          <div class="info-content">
+            <span class="info-label">Publié le</span>
+            <span class="info-value">{{ produit.dateCreation | date:'dd/MM/yyyy' }}</span>
+          </div>
+        </div>
+
+        <div class="info-card" *ngIf="produit.dateExpiration">
+          <mat-icon>schedule</mat-icon>
+          <div class="info-content">
+            <span class="info-label">Expire le</span>
+            <span class="info-value">{{ produit.dateExpiration | date:'dd/MM/yyyy' }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="seller-section">
+        <h3><mat-icon>person</mat-icon> Vendeur</h3>
+        <div class="seller-card">
+          <div class="seller-avatar">
+            <mat-icon>account_circle</mat-icon>
+          </div>
+          <div class="seller-details">
+            <span class="seller-name">{{ produit.utilisateur?.nom }} {{ produit.utilisateur?.prenom }}</span>
+            <span class="seller-role">Vendeur vérifié</span>
+          </div>
+          <button mat-raised-button color="primary">
+            <mat-icon>message</mat-icon>
+            Contacter
+          </button>
+        </div>
+      </div>
+
+      <div class="product-actions" *ngIf="isOwner || canModerate">
+        <button
+          mat-raised-button
+          color="primary"
+          *ngIf="isOwner"
+          (click)="editProduit()">
+          <mat-icon>edit</mat-icon>
+          Modifier
+        </button>
+
+        <button
+          mat-raised-button
+          color="warn"
+          *ngIf="isOwner"
+          (click)="deleteProduit()">
+          <mat-icon>delete</mat-icon>
+          Supprimer
+        </button>
+
+        <button
+          mat-raised-button
+          color="primary"
+          *ngIf="canModerate && produit.statut === 'EN_ATTENTE'"
+          (click)="validerProduit()">
+          <mat-icon>check_circle</mat-icon>
+          Valider
+        </button>
+
+        <button
+          mat-raised-button
+          color="warn"
+          *ngIf="canModerate && produit.statut === 'EN_ATTENTE'"
+          (click)="rejeterProduit()">
+          <mat-icon>cancel</mat-icon>
+          Rejeter
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!isLoading && !errorMessage && !produit" class="no-product">
+    <mat-icon>inventory</mat-icon>
+    <h3>Produit non trouvé</h3>
+    <p>Le produit demandé n'existe pas ou a été supprimé.</p>
+    <button mat-raised-button color="primary" (click)="goBackToProducts()">
+      Retour aux produits
+    </button>
+  </div>
+</div>
