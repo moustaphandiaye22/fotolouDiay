@@ -106,8 +106,6 @@ export const validationProduit: ValidationChain[] = [
     
   body('estVip')
     .optional()
-    .isBoolean()
-    .withMessage('Le statut VIP doit être un booléen')
 ];
 
 /**
@@ -139,8 +137,6 @@ export const validationMiseAJourProduit: ValidationChain[] = [
     
   body('estVip')
     .optional()
-    .isBoolean()
-    .withMessage('Le statut VIP doit être un booléen')
 ];
 
 /**

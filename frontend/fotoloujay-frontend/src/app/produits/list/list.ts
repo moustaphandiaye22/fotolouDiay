@@ -5,6 +5,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { RouterModule, Router } from '@angular/router';
 import { ProduitService } from '../../services/produit';
 
@@ -17,6 +19,8 @@ import { ProduitService } from '../../services/produit';
     MatIconModule,
     MatProgressSpinnerModule,
     MatChipsModule,
+    MatTooltipModule,
+    MatPaginatorModule,
     RouterModule
   ],
   templateUrl: './list.html',
@@ -26,6 +30,13 @@ export class List implements OnInit {
   produits: any[] = [];
   isLoading = false;
   errorMessage = '';
+  viewMode: 'grid' | 'list' = 'grid';
+
+  // Pagination properties
+  currentPage = 1;
+  pageSize = 20;
+  totalItems = 0;
+  totalPages = 0;
 
   constructor(
     private produitService: ProduitService,
@@ -47,6 +58,8 @@ export class List implements OnInit {
         console.log('Mes produits response:', response);
         if (response.success) {
           this.produits = response.data?.produits || response.data || [];
+          this.totalItems = response.data?.pagination?.total || 0;
+          this.totalPages = response.data?.pagination?.totalPages || 0;
         } else {
           this.errorMessage = response.message || 'Erreur lors du chargement des produits';
         }
@@ -103,5 +116,35 @@ export class List implements OnInit {
         }
       });
     }
+  }
+
+  toggleViewMode() {
+    this.viewMode = this.viewMode === 'grid' ? 'list' : 'grid';
+  }
+
+  onPageChange(event: any) {
+    this.currentPage = event.pageIndex + 1;
+    this.pageSize = event.pageSize;
+    this.loadProduits();
+  }
+
+  callUser(phoneNumber?: string) {
+    if (phoneNumber) {
+      window.open(`tel:${phoneNumber}`, '_self');
+    }
+  }
+
+  whatsappUser(phoneNumber?: string, productTitle?: string) {
+    if (phoneNumber) {
+      const message = `Bonjour, je suis intéressé par votre produit: ${productTitle}`;
+      const whatsappUrl = `https://wa.me/${phoneNumber.replace(/\s+/g, '')}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+  }
+
+  messageUser(produit: any) {
+    // TODO: Implement messaging functionality
+    console.log('Message user for product:', produit);
+    // This could open a chat dialog or navigate to a messaging page
   }
 }

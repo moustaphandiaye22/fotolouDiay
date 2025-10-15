@@ -100,13 +100,11 @@ routesProduit.get('/mes-produits', verifierToken, ControleurProduit.obtenirMesPr
  */
 routesProduit.post(
   '/',
-  loggerSecurite,
   verifierToken,
   upload.fields([
     { name: 'photo', maxCount: 1 },
     { name: 'photosSupplementaires', maxCount: 7 }
   ]),
-  validerSecuritePhotos,
   validationProduit,
   ControleurProduit.creer
 );

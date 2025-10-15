@@ -13,6 +13,12 @@
   border-bottom: 2px solid #8B4513;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .header h1 {
   color: #8B4513;
   font-size: 2rem;
@@ -74,6 +80,54 @@
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
+}
+
+.produits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.produits-list .produit-card {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  min-height: 200px;
+}
+
+.produits-list .product-image {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.produits-list mat-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.produits-list .produit-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.produits-list .info-row {
+  flex: 1;
+  min-width: 150px;
+}
+
+.produits-list mat-card-actions {
+  flex-direction: row;
+  padding: 0.5rem 1rem;
+  border-top: none;
+  border-left: 1px solid #eee;
+  align-self: stretch;
+  justify-content: center;
 }
 
 .produit-card {
@@ -187,11 +241,35 @@ mat-card-actions {
   gap: 0.5rem;
   justify-content: space-between;
   border-top: 1px solid #eee;
+  flex-wrap: wrap;
 }
 
-mat-card-actions button {
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.action-buttons button {
   flex: 1;
   font-size: 0.875rem;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.contact-actions button {
+  width: 32px;
+  height: 32px;
+}
+
+.contact-actions button mat-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
 }
 
 @media (max-width: 768px) {
@@ -221,4 +299,77 @@ mat-card-actions button {
   mat-card-actions button {
     width: 100%;
   }
+}
+
+.produits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 2rem;
+}
+
+.produits-list .produit-card {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  min-height: 200px;
+}
+
+.produits-list .product-image {
+  width: 250px;
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.produits-list .product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px 0 0 4px;
+}
+
+.produits-list mat-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.produits-list .produit-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: auto;
+}
+
+.produits-list .info-row {
+  flex: 1;
+  min-width: 150px;
+}
+
+.produits-list mat-card-actions {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.5rem 1rem 1rem;
+  border-top: 1px solid #eee;
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.produits-list mat-card-actions button {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+
+
+.pagination-container ::ng-deep .mat-mdc-paginator-container {
+  justify-content: center;
 }
