@@ -58,7 +58,7 @@ export class Moderation implements OnInit {
       next: (response) => {
         this.isLoading = false;
         if (response.success) {
-          this.allProduits = response.data || [];
+          this.allProduits = response.data?.produits || [];
           this.categorizeProduits();
         } else {
           this.errorMessage = response.message || 'Erreur lors du chargement des produits';
@@ -82,40 +82,35 @@ export class Moderation implements OnInit {
   }
 
   validerProduit(produit: Product) {
-    if (confirm(`Êtes-vous sûr de vouloir valider le produit "${produit.titre}" ?`)) {
-      this.produitService.validerProduit(produit.id).subscribe({
-        next: (response) => {
-          if (response.success) {
-            this.showSuccess('Produit validé avec succès');
-            this.loadAllProduits(); // Refresh the list
-          } else {
-            this.showError('Erreur lors de la validation du produit');
-          }
-        },
-        error: (error) => {
+    this.produitService.validerProduit(produit.id).subscribe({
+      next: (response) => {
+        if (response.success) {
+          this.showSuccess(`Produit "${produit.titre}" validé avec succès`);
+          this.loadAllProduits(); // Refresh the list
+        } else {
           this.showError('Erreur lors de la validation du produit');
         }
-      });
-    }
+      },
+      error: (error) => {
+        this.showError('Erreur lors de la validation du produit');
+      }
+    });
   }
 
   rejeterProduit(produit: Product) {
-    const raison = prompt('Veuillez indiquer la raison du rejet (optionnel):');
-    if (confirm(`Êtes-vous sûr de vouloir rejeter le produit "${produit.titre}" ?`)) {
-      this.produitService.rejeterProduit(produit.id).subscribe({
-        next: (response) => {
-          if (response.success) {
-            this.showSuccess('Produit rejeté');
-            this.loadAllProduits(); // Refresh the list
-          } else {
-            this.showError('Erreur lors du rejet du produit');
-          }
-        },
-        error: (error) => {
+    this.produitService.rejeterProduit(produit.id).subscribe({
+      next: (response) => {
+        if (response.success) {
+          this.showSuccess(`Produit "${produit.titre}" rejeté`);
+          this.loadAllProduits(); // Refresh the list
+        } else {
           this.showError('Erreur lors du rejet du produit');
         }
-      });
-    }
+      },
+      error: (error) => {
+        this.showError('Erreur lors du rejet du produit');
+      }
+    });
   }
 
   formatPrix(prix: number): string {

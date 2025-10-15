@@ -5,6 +5,12 @@
   </div>
 
   <div *ngIf="user && !isLoading" class="profil-content">
+    <div class="profil-top-bar">
+      <button mat-stroked-button type="button" class="back-button" (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon>
+        Retour
+      </button>
+    </div>
     <div class="profil-header">
       <div class="user-avatar">
         <mat-icon>person</mat-icon>
@@ -22,6 +28,30 @@
       <!-- Informations personnelles -->
       <mat-tab label="Informations personnelles">
         <div class="tab-content">
+          <div class="info-summary">
+            <mat-card class="info-item">
+              <mat-icon>badge</mat-icon>
+              <div>
+                <span class="info-label">Nom complet</span>
+                <span class="info-value">{{ (user.prenom || '') + (user.prenom ? ' ' : '') + (user.nom || '') || 'Non renseigné' }}</span>
+              </div>
+            </mat-card>
+            <mat-card class="info-item">
+              <mat-icon>mail</mat-icon>
+              <div>
+                <span class="info-label">Email</span>
+                <span class="info-value">{{ user.email || 'Non renseigné' }}</span>
+              </div>
+            </mat-card>
+            <mat-card class="info-item">
+              <mat-icon>call</mat-icon>
+              <div>
+                <span class="info-label">Téléphone</span>
+                <span class="info-value">{{ user.telephone || 'Non renseigné' }}</span>
+              </div>
+            </mat-card>
+          </div>
+
           <form [formGroup]="profileForm" (ngSubmit)="updateProfile()">
             <mat-card>
               <mat-card-header>

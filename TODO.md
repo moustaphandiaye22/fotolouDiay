@@ -1,0 +1,5 @@
+- [x] Modify notifications.html to show all notifications in one list instead of separate unread and all sections
+- [x] Update the section title to "Notifications" and show total count
+- [x] Remove the redundant "Toutes les notifications" section
+- [x] Adjust the "no notifications" message condition
+- [x] Test the changes to ensure read notifications are displayed (Backend builds successfully)
