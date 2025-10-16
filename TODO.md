@@ -1,17 +1,16 @@
-- [x] Add pagination properties to public.ts (currentPage, pageSize, totalItems, totalPages)
-- [x] Update ProduitService to support pagination parameters
-- [x] Add pagination logic to loadProduitsPublics() and loadProduitsVip()
-- [x] Add pagination UI to public.html using MatPaginator
-- [x] Add pagination properties to list.ts
-- [x] Add pagination logic to loadProduits() in list.ts
-- [x] Add pagination UI to list.html using MatPaginator
-- [x] Update imports to include MatPaginatorModule
-- [x] Test pagination functionality
-- [x] Add view toggle button to list component header
-- [x] Add viewMode property to list.ts
-- [x] Update list.html to support both grid and list views
-- [x] Update list.css with list view styles
-- [x] Add view toggle button to public component header
-- [x] Add viewMode property to public.ts
-- [x] Update public.html to support both grid and list views
-- [x] Update public.css with list view styles
+# TODO - Implémentation de la liste des vendeurs pour admin/modérateur
+
+## Backend
+- [ ] Modifier la méthode `obtenirTous` dans `utilisateur.controller.ts` pour permettre l'accès aux modérateurs
+- [ ] Implémenter la route GET /utilisateurs dans `utilisateur.routes.ts`
+
+## Frontend
+- [ ] Ajouter méthode `getUsers()` dans `auth.service.ts`
+- [ ] Ajouter logique de chargement des utilisateurs dans `dashboard.ts`
+- [ ] Ajouter onglet "Utilisateurs" dans `dashboard.html`
+- [ ] Ajouter tableau pour afficher la liste des utilisateurs
+
+## Tests
+- [ ] Tester l'accès pour les modérateurs
+- [ ] Tester l'accès pour les administrateurs
+- [ ] Vérifier l'affichage correct de la liste

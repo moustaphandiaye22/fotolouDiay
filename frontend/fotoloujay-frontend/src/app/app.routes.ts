@@ -58,6 +58,11 @@ export const routes: Routes = [
     loadComponent: () => import('./moderation/moderation').then(m => m.Moderation)
   },
   {
+    path: 'dashboard',
+    canActivate: [() => import('./guards/auth-guard').then(m => m.moderatorGuard)],
+    loadComponent: () => import('./dashboard/dashboard').then(m => m.Dashboard)
+  },
+  {
     path: '**',
     redirectTo: '/produits'
   }

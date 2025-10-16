@@ -25,9 +25,20 @@
             mat-raised-button
             color="primary"
             [routerLink]="['/produits/create']"
-            class="nav-button">
+            class="nav-button"
+            *ngIf="currentUser.role !== 'MODERATEUR' && currentUser.role !== 'ADMINISTRATEUR'">
             <span>Ajouter un Produit</span>
           </button>
+
+          <!-- Dashboard Link for Admins/Moderators -->
+          <a [routerLink]="['/dashboard']" class="nav-link" *ngIf="currentUser.role === 'MODERATEUR' || currentUser.role === 'ADMINISTRATEUR'">
+            Dashboard
+          </a>
+
+          <!-- Moderation Link for Admins/Moderators -->
+          <a [routerLink]="['/moderation']" class="nav-link" *ngIf="currentUser.role === 'MODERATEUR' || currentUser.role === 'ADMINISTRATEUR'">
+            Modération
+          </a>
 
           <!-- Notifications Icon with Badge -->
           <button
@@ -56,13 +67,7 @@
                 <a [routerLink]="['/profil']" class="dropdown-item" (click)="toggleUserMenu()">
                   <mat-icon>person</mat-icon> Mon Profil
                 </a>
-                <a [routerLink]="['/produits/mes-produits']" class="dropdown-item" (click)="toggleUserMenu()">
-                  <mat-icon>inventory_2</mat-icon> Mes Produits
-                </a>
-                <a [routerLink]="['/moderation']" class="dropdown-item" *ngIf="currentUser.role === 'MODERATEUR' || currentUser.role === 'ADMINISTRATEUR'" (click)="toggleUserMenu()">
-                  <mat-icon>admin_panel_settings</mat-icon> Modération
-                </a>
-                <hr class="dropdown-divider" *ngIf="currentUser.role === 'MODERATEUR' || currentUser.role === 'ADMINISTRATEUR'">
+                <hr class="dropdown-divider">
                 <button class="dropdown-item logout-btn" (click)="logout()">
                   <mat-icon>logout</mat-icon> Déconnexion
                 </button>

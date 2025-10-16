@@ -237,4 +237,24 @@ export class Detail implements OnInit {
   goBackToProducts() {
     this.router.navigate(['/produits']);
   }
+
+  callUser(telephone?: string) {
+    if (telephone) {
+      window.location.href = `tel:${telephone}`;
+    }
+  }
+
+  whatsappUser(telephone?: string, titre?: string) {
+    if (telephone) {
+      const message = titre ? `Bonjour, je suis intéressé par votre produit: ${titre}` : 'Bonjour, je suis intéressé par votre produit';
+      const whatsappUrl = `https://wa.me/${telephone.replace(/\s+/g, '')}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+  }
+
+  messageUser(produit: Product) {
+    // Pour l'instant, ouvrir WhatsApp avec un message personnalisé
+    // Plus tard, on pourra implémenter un système de messagerie interne
+    this.whatsappUser(produit.utilisateur?.telephone, produit.titre);
+  }
 }

@@ -296,7 +296,15 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
-.seller-card button {
+.contact-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.contact-buttons button {
+  min-width: 100px;
   background: #fff;
   color: #8B4513;
   font-weight: 600;

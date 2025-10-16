@@ -94,10 +94,20 @@
             <span class="seller-name">{{ produit.utilisateur?.nom }} {{ produit.utilisateur?.prenom }}</span>
             <span class="seller-role">Vendeur vérifié</span>
           </div>
-          <button mat-raised-button color="primary">
-            <mat-icon>message</mat-icon>
-            Contacter
-          </button>
+          <div class="contact-buttons">
+            <button mat-raised-button color="primary" (click)="callUser(produit.utilisateur?.telephone)">
+              <mat-icon>phone</mat-icon>
+              Appeler
+            </button>
+            <button mat-raised-button color="primary" (click)="whatsappUser(produit.utilisateur?.telephone, produit.titre)">
+              <mat-icon>chat</mat-icon>
+              WhatsApp
+            </button>
+            <button mat-raised-button color="primary" (click)="messageUser(produit)">
+              <mat-icon>message</mat-icon>
+              Message
+            </button>
+          </div>
         </div>
       </div>
 
