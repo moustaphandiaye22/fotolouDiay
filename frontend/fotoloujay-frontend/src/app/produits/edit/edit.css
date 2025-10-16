@@ -1,0 +1,208 @@
+.edit-product-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.form-header h1 {
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form-header p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* Camera Section */
+.camera-section {
+  margin-bottom: 32px;
+}
+
+.camera-container {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  border: 2px dashed #ddd;
+}
+
+.camera-feed {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.camera-placeholder {
+  padding: 48px 24px;
+}
+
+.camera-placeholder mat-icon {
+  font-size: 48px;
+  width: 48px;
+  height: 48px;
+  color: #ccc;
+  margin-bottom: 16px;
+}
+
+.camera-placeholder p {
+  color: #666;
+  margin: 0;
+}
+
+.image-preview {
+  margin-bottom: 16px;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.camera-controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Form Section */
+.form-section {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+}
+
+.form-section h2 {
+  color: #333;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 8px;
+}
+
+.image-preview-edit {
+  text-align: center;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.image-preview-edit img {
+  max-width: 200px;
+  max-height: 150px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.image-preview-edit p {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.half-width {
+  flex: 1;
+}
+
+.vip-checkbox {
+  margin-bottom: 16px;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+/* Messages */
+.success-message {
+  background: #e8f5e8;
+  color: #2e7d32;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .edit-product-container {
+    padding: 16px;
+  }
+
+  .form-section {
+    padding: 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .camera-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .camera-controls button {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Material Design Overrides */
+mat-form-field {
+  margin-bottom: 8px;
+}
+
+mat-checkbox {
+  font-size: 14px;
+}

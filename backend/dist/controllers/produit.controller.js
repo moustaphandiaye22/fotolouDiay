@@ -325,7 +325,7 @@ class ControleurProduit {
             try {
                 const utilisateurId = (_a = req.utilisateur) === null || _a === void 0 ? void 0 : _a.id;
                 const role = (_b = req.utilisateur) === null || _b === void 0 ? void 0 : _b.role;
-                // Seuls les modérateurs/admins peuvent voir toutes les statistiques
+                // Les modérateurs/admins peuvent voir toutes les statistiques, les vendeurs voient les leurs
                 const idUtilisateur = (role === message_1.RoleUtilisateur.MODERATEUR || role === message_1.RoleUtilisateur.ADMINISTRATEUR)
                     ? undefined
                     : utilisateurId;

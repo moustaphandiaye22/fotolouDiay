@@ -30,6 +30,12 @@ exports.routesUtilisateur.put('/:id', auth_middleware_1.verifierToken, (req, res
     res.json({ message: 'Mise à jour utilisateur - À implémenter' });
 });
 /**
+ * @route PUT /api/utilisateurs/:id/statut
+ * @desc Changer le statut d'un utilisateur (activer/désactiver)
+ * @access Private (Admin)
+ */
+exports.routesUtilisateur.put('/:id/statut', auth_middleware_1.verifierToken, (0, auth_middleware_1.verifierRole)(message_1.RoleUtilisateur.ADMINISTRATEUR), utilisateur_controller_1.ControleurUtilisateur.changerStatut);
+/**
  * @route DELETE /api/utilisateurs/:id
  * @desc Supprimer un utilisateur
  * @access Private (Admin)

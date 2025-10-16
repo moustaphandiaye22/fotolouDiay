@@ -21,14 +21,15 @@ export class ControleurAuth {
         });
       }
 
-      const { nom, prenom, email, telephone, motDePasse } = req.body;
+      const { nom, prenom, email, telephone, motDePasse, role } = req.body;
 
       const resultat = await ServiceAuth.inscrire({
         nom,
         prenom,
         email,
         telephone,
-        motDePasse
+        motDePasse,
+        role
       });
 
       const statusCode = resultat.success ? 201 : 400;

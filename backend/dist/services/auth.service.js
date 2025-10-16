@@ -18,6 +18,19 @@ const bcryptjs_1 = __importDefault(require("bcryptjs"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const client_1 = require("@prisma/client");
 const message_1 = require("../enums/message");
+// Helper function to convert string role to enum
+function stringToRoleUtilisateur(roleStr) {
+    switch (roleStr === null || roleStr === void 0 ? void 0 : roleStr.toUpperCase()) {
+        case 'VENDEUR':
+            return message_1.RoleUtilisateur.VENDEUR;
+        case 'MODERATEUR':
+            return message_1.RoleUtilisateur.MODERATEUR;
+        case 'ADMINISTRATEUR':
+            return message_1.RoleUtilisateur.ADMINISTRATEUR;
+        default:
+            return message_1.RoleUtilisateur.UTILISATEUR;
+    }
+}
 const prisma = new client_1.PrismaClient();
 class ServiceAuth {
     /**
@@ -46,7 +59,7 @@ class ServiceAuth {
                         email: donnees.email,
                         telephone: donnees.telephone,
                         motDePasse: motDePasseHache,
-                        role: message_1.RoleUtilisateur.UTILISATEUR
+                        role: stringToRoleUtilisateur(donnees.role)
                     },
                     select: {
                         id: true,

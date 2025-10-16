@@ -5,6 +5,20 @@ import jwt, { SignOptions } from 'jsonwebtoken';
 import { PrismaClient } from '@prisma/client';
 import { RoleUtilisateur, MESSAGES_ERREUR, MESSAGES_SUCCES } from '../enums/message';
 
+// Helper function to convert string role to enum
+function stringToRoleUtilisateur(roleStr: string): RoleUtilisateur {
+  switch (roleStr?.toUpperCase()) {
+    case 'VENDEUR':
+      return RoleUtilisateur.VENDEUR;
+    case 'MODERATEUR':
+      return RoleUtilisateur.MODERATEUR;
+    case 'ADMINISTRATEUR':
+      return RoleUtilisateur.ADMINISTRATEUR;
+    default:
+      return RoleUtilisateur.UTILISATEUR;
+  }
+}
+
 const prisma = new PrismaClient();
 
 // Interfaces pour les données d'authentification
@@ -14,6 +28,7 @@ export interface DonneesInscription {
   email: string;
   telephone?: string;
   motDePasse: string;
+  role: RoleUtilisateur;
 }
 
 export interface DonneesConnexion {
@@ -65,7 +80,7 @@ export class ServiceAuth {
           email: donnees.email,
           telephone: donnees.telephone,
           motDePasse: motDePasseHache,
-          role: RoleUtilisateur.UTILISATEUR
+          role: stringToRoleUtilisateur(donnees.role) as any
         },
         select: {
           id: true,

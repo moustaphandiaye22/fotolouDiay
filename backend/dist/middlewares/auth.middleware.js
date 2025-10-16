@@ -158,7 +158,7 @@ exports.authentificationOptionnelle = authentificationOptionnelle;
  * Middleware de vérification de propriété d'un produit
  */
 const verifierProprieteProduit = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
-    var _a, _b, _c;
+    var _a, _b, _c, _d;
     try {
         const produitId = parseInt(req.params.id);
         const utilisateurId = (_a = req.utilisateur) === null || _a === void 0 ? void 0 : _a.id;
@@ -168,9 +168,10 @@ const verifierProprieteProduit = (req, res, next) => __awaiter(void 0, void 0, v
                 message: message_1.MESSAGES_ERREUR.TOKEN_INVALIDE
             });
         }
-        // Les modérateurs et administrateurs peuvent modifier tous les produits
+        // Les modérateurs, administrateurs et vendeurs peuvent gérer leurs produits respectifs
         if (((_b = req.utilisateur) === null || _b === void 0 ? void 0 : _b.role) === message_1.RoleUtilisateur.MODERATEUR ||
-            ((_c = req.utilisateur) === null || _c === void 0 ? void 0 : _c.role) === message_1.RoleUtilisateur.ADMINISTRATEUR) {
+            ((_c = req.utilisateur) === null || _c === void 0 ? void 0 : _c.role) === message_1.RoleUtilisateur.ADMINISTRATEUR ||
+            ((_d = req.utilisateur) === null || _d === void 0 ? void 0 : _d.role) === message_1.RoleUtilisateur.VENDEUR) {
             return next();
         }
         // Vérification de la propriété pour les utilisateurs normaux

@@ -30,13 +30,14 @@ class ControleurAuth {
                         erreurs: erreurs.array()
                     });
                 }
-                const { nom, prenom, email, telephone, motDePasse } = req.body;
+                const { nom, prenom, email, telephone, motDePasse, role } = req.body;
                 const resultat = yield auth_service_1.ServiceAuth.inscrire({
                     nom,
                     prenom,
                     email,
                     telephone,
-                    motDePasse
+                    motDePasse,
+                    role
                 });
                 const statusCode = resultat.success ? 201 : 400;
                 return res.status(statusCode).json(resultat);

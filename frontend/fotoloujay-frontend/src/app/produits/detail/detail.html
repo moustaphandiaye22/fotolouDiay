@@ -103,9 +103,9 @@
               <mat-icon>chat</mat-icon>
               WhatsApp
             </button>
-            <button mat-raised-button color="primary" (click)="messageUser(produit)">
-              <mat-icon>message</mat-icon>
-              Message
+            <button mat-raised-button color="primary" (click)="showContactDialog = true">
+              <mat-icon>email</mat-icon>
+              Envoyer un message
             </button>
           </div>
         </div>
@@ -164,6 +164,95 @@
           {{ paymentError }}
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Contact Dialog -->
+  <div *ngIf="showContactDialog" class="contact-dialog-overlay" (click)="showContactDialog = false">
+    <div class="contact-dialog" (click)="$event.stopPropagation()">
+      <div class="dialog-header">
+        <h3>Contacter le vendeur</h3>
+        <button mat-icon-button (click)="showContactDialog = false">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+
+      <form (ngSubmit)="sendContactMessage()" #contactDialogForm="ngForm" class="contact-dialog-form">
+        <div class="form-group">
+          <label for="contactNom">Votre nom *</label>
+          <input
+            type="text"
+            id="contactNom"
+            name="contactNom"
+            [(ngModel)]="contactMessage.nom"
+            required
+            class="form-control"
+            placeholder="Votre nom">
+        </div>
+
+        <div class="form-group">
+          <label for="contactEmail">Votre email *</label>
+          <input
+            type="email"
+            id="contactEmail"
+            name="contactEmail"
+            [(ngModel)]="contactMessage.email"
+            required
+            class="form-control"
+            placeholder="votre.email@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="contactTelephone">Votre téléphone</label>
+          <input
+            type="tel"
+            id="contactTelephone"
+            name="contactTelephone"
+            [(ngModel)]="contactMessage.telephone"
+            class="form-control"
+            placeholder="+221 XX XXX XX XX">
+        </div>
+
+        <div class="form-group">
+          <label for="contactMessage">Votre message *</label>
+          <textarea
+            id="contactMessage"
+            name="contactMessage"
+            [(ngModel)]="contactMessage.message"
+            required
+            rows="4"
+            class="form-control"
+            placeholder="Décrivez votre intérêt pour ce produit..."></textarea>
+        </div>
+
+        <div *ngIf="contactErrorMessage" class="error-message">
+          <mat-icon>error</mat-icon>
+          {{ contactErrorMessage }}
+        </div>
+
+        <div *ngIf="contactSuccessMessage" class="success-message">
+          <mat-icon>check_circle</mat-icon>
+          {{ contactSuccessMessage }}
+        </div>
+
+        <div class="dialog-actions">
+          <button
+            type="button"
+            mat-button
+            (click)="showContactDialog = false">
+            Annuler
+          </button>
+          <button
+            type="submit"
+            mat-raised-button
+            color="primary"
+            [disabled]="!contactDialogForm.form.valid || isSendingMessage">
+            <mat-icon *ngIf="!isSendingMessage">send</mat-icon>
+            <mat-spinner *ngIf="isSendingMessage" diameter="20"></mat-spinner>
+            {{ isSendingMessage ? 'Envoi...' : 'Envoyer le message' }}
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 

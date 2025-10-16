@@ -6,7 +6,7 @@ import { Observable, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:2025/api/auth';
+  private apiUrl = 'http://localhost:2026/api/auth';
 
   constructor(private http: HttpClient) {}
 
@@ -89,7 +89,7 @@ export class AuthService {
     const token = localStorage.getItem('token');
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
 
-    let url = 'http://localhost:2025/api/utilisateurs';
+    let url = 'http://localhost:2026/api/utilisateurs';
     const queryParams: string[] = [];
 
     if (params) {
@@ -109,6 +109,6 @@ export class AuthService {
   toggleUserStatus(userId: number): Observable<any> {
     const token = localStorage.getItem('token');
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
-    return this.http.put(`http://localhost:2025/api/utilisateurs/${userId}/statut`, {}, { headers });
+    return this.http.put(`http://localhost:2026/api/utilisateurs/${userId}/statut`, {}, { headers });
   }
 }

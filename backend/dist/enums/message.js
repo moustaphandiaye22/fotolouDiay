@@ -5,6 +5,7 @@ exports.PERMISSIONS = exports.MESSAGES_VALIDATION = exports.MESSAGES_ERREUR = ex
 var RoleUtilisateur;
 (function (RoleUtilisateur) {
     RoleUtilisateur["UTILISATEUR"] = "UTILISATEUR";
+    RoleUtilisateur["VENDEUR"] = "VENDEUR";
     RoleUtilisateur["MODERATEUR"] = "MODERATEUR";
     RoleUtilisateur["ADMINISTRATEUR"] = "ADMINISTRATEUR";
 })(RoleUtilisateur || (exports.RoleUtilisateur = RoleUtilisateur = {}));
@@ -56,7 +57,7 @@ exports.MESSAGES_ERREUR = {
     // Erreurs de validation
     CHAMPS_REQUIS: 'Tous les champs requis doivent être remplis',
     EMAIL_INVALIDE: 'Format d\'email invalide',
-    MOT_DE_PASSE_TROP_COURT: 'Le mot de passe doit contenir au moins 6 caractères',
+    MOT_DE_PASSE_TROP_COURT: 'Le mot de passe doit contenir au moins 6 caractères et un chiffre',
     PRIX_INVALIDE: 'Le prix doit être un nombre positif',
     // Erreurs générales
     ERREUR_SERVEUR: 'Erreur interne du serveur',
@@ -77,10 +78,15 @@ exports.MESSAGES_VALIDATION = {
 // Configuration des rôles et permissions
 exports.PERMISSIONS = {
     [RoleUtilisateur.UTILISATEUR]: [
+        'lire_produits'
+    ],
+    [RoleUtilisateur.VENDEUR]: [
         'lire_produits',
         'creer_produit',
         'modifier_ses_produits',
-        'supprimer_ses_produits'
+        'supprimer_ses_produits',
+        'voir_ses_produits',
+        'gerer_ses_annonces'
     ],
     [RoleUtilisateur.MODERATEUR]: [
         'lire_produits',

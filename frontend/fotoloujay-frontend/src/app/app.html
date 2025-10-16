@@ -11,6 +11,7 @@
           FotoL Diayye
         </a>
         <a [routerLink]="['/produits']" class="nav-link">Produits</a>
+        <a [routerLink]="['/contact']" class="nav-link">Contact</a>
 
         <!-- Show login/register when not authenticated -->
         <ng-container *ngIf="!isLoggedIn">
@@ -20,17 +21,22 @@
 
         <!-- Show main navigation when authenticated -->
         <ng-container *ngIf="isLoggedIn && currentUser">
-          <!-- Add Product Button -->
+          <!-- Add Product Button for Vendors and Users -->
           <button
             mat-raised-button
             color="primary"
             [routerLink]="['/produits/create']"
             class="nav-button"
-            *ngIf="currentUser.role !== 'MODERATEUR' && currentUser.role !== 'ADMINISTRATEUR'">
+            *ngIf="currentUser.role === 'VENDEUR' || currentUser.role === 'UTILISATEUR'">
             <span>Ajouter un Produit</span>
           </button>
 
-          <!-- Dashboard Link for Admins/Moderators -->
+          <!-- Vendor Dashboard Link -->
+          <a [routerLink]="['/vendor-dashboard']" class="nav-link" *ngIf="currentUser.role === 'VENDEUR'">
+            Mon Dashboard
+          </a>
+
+          <!-- Admin/Moderator Dashboard Link -->
           <a [routerLink]="['/dashboard']" class="nav-link" *ngIf="currentUser.role === 'MODERATEUR' || currentUser.role === 'ADMINISTRATEUR'">
             Dashboard
           </a>
@@ -87,5 +93,10 @@
   <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 FotoLouJay - Plateforme de vente en ligne</p>
+    <div class="footer-links">
+      <a [routerLink]="['/contact']">Nous contacter</a>
+      <a href="#">Politique de confidentialité</a>
+      <a href="#">Conditions d'utilisation</a>
+    </div>
   </footer>
 </div>

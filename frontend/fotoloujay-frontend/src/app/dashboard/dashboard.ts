@@ -182,10 +182,21 @@ export class Dashboard implements OnInit {
            this.currentUser?.role === RoleUtilisateur.ADMINISTRATEUR;
   }
 
+  canManageProducts(): boolean {
+    return this.currentUser?.role === RoleUtilisateur.VENDEUR ||
+           this.currentUser?.role === RoleUtilisateur.MODERATEUR ||
+           this.currentUser?.role === RoleUtilisateur.ADMINISTRATEUR;
+  }
+
+  isVendor(): boolean {
+    return this.currentUser?.role === RoleUtilisateur.VENDEUR;
+  }
+
   getRoleLabel(role: RoleUtilisateur): string {
     switch (role) {
       case RoleUtilisateur.ADMINISTRATEUR: return 'Administrateur';
       case RoleUtilisateur.MODERATEUR: return 'Modérateur';
+      case RoleUtilisateur.VENDEUR: return 'Vendeur';
       case RoleUtilisateur.UTILISATEUR: return 'Utilisateur';
       default: return role;
     }
@@ -195,7 +206,8 @@ export class Dashboard implements OnInit {
     switch (role) {
       case RoleUtilisateur.ADMINISTRATEUR: return 'warn';
       case RoleUtilisateur.MODERATEUR: return 'accent';
-      case RoleUtilisateur.UTILISATEUR: return 'primary';
+      case RoleUtilisateur.VENDEUR: return 'primary';
+      case RoleUtilisateur.UTILISATEUR: return 'basic';
       default: return 'basic';
     }
   }

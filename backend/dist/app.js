@@ -24,6 +24,7 @@ const produit_routes_1 = require("./routes/produit.routes");
 const notification_routes_1 = require("./routes/notification.routes");
 const auth_routes_1 = require("./routes/auth.routes");
 const payment_routes_1 = require("./routes/payment.routes");
+const contact_routes_1 = __importDefault(require("./routes/contact.routes"));
 // Configuration des variables d'environnement
 dotenv_1.default.config();
 // Configuration du logger
@@ -85,6 +86,7 @@ app.use('/api/utilisateurs', utilisateur_routes_1.routesUtilisateur);
 app.use('/api/produits', produit_routes_1.routesProduit);
 app.use('/api/notifications', notification_routes_1.routesNotification);
 app.use('/api/paiements', payment_routes_1.routesPaiement);
+app.use('/api/contacts', contact_routes_1.default);
 // Route de santé
 app.get('/api/health', (req, res) => {
     res.json({

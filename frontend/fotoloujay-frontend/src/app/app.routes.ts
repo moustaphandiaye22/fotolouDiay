@@ -37,6 +37,11 @@ export const routes: Routes = [
         loadComponent: () => import('./produits/create/create').then(m => m.Create)
       },
       {
+        path: 'edit/:id',
+        canActivate: [() => import('./guards/auth-guard').then(m => m.authGuard)],
+        loadComponent: () => import('./produits/edit/edit').then(m => m.Edit)
+      },
+      {
         path: ':id',
         loadComponent: () => import('./produits/detail/detail').then(m => m.Detail)
       }
@@ -58,9 +63,18 @@ export const routes: Routes = [
     loadComponent: () => import('./moderation/moderation').then(m => m.Moderation)
   },
   {
+    path: 'contact',
+    loadComponent: () => import('./contact/contact').then(m => m.Contact)
+  },
+  {
     path: 'dashboard',
     canActivate: [() => import('./guards/auth-guard').then(m => m.moderatorGuard)],
     loadComponent: () => import('./dashboard/dashboard').then(m => m.Dashboard)
+  },
+  {
+    path: 'vendor-dashboard',
+    canActivate: [() => import('./guards/auth-guard').then(m => m.authGuard)],
+    loadComponent: () => import('./dashboard/vendor-dashboard').then(m => m.VendorDashboard)
   },
   {
     path: '**',

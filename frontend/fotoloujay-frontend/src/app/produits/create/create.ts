@@ -200,7 +200,7 @@ export class Create implements AfterViewInit, OnDestroy {
     this.produitService.createProduit(formData).subscribe({
       next: (response) => {
         if (response.success) {
-          this.router.navigate(['/produits/mes-produits']);
+          this.router.navigate(['/vendor-dashboard']);
         } else {
           this.errorMessage = response.message || 'Erreur lors de la création du produit';
           this.isSubmitting = false;

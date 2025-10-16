@@ -7,7 +7,7 @@ import { Notification, CreateNotificationData, MarkNotificationReadData } from '
   providedIn: 'root'
 })
 export class NotificationService {
-  private apiUrl = 'http://localhost:2025/api/notifications';
+  private apiUrl = 'http://localhost:2026/api/notifications';
 
   constructor(private http: HttpClient) {}
 

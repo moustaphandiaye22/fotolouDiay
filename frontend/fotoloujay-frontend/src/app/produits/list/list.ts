@@ -7,6 +7,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 import { RouterModule, Router } from '@angular/router';
 import { ProduitService } from '../../services/produit';
 
@@ -21,6 +24,9 @@ import { ProduitService } from '../../services/produit';
     MatChipsModule,
     MatTooltipModule,
     MatPaginatorModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
     RouterModule
   ],
   templateUrl: './list.html',
@@ -28,9 +34,11 @@ import { ProduitService } from '../../services/produit';
 })
 export class List implements OnInit {
   produits: any[] = [];
+  filteredProduits: any[] = [];
   isLoading = false;
   errorMessage = '';
   viewMode: 'grid' | 'list' = 'grid';
+  searchQuery = '';
 
   // Pagination properties
   currentPage = 1;
@@ -47,19 +55,51 @@ export class List implements OnInit {
     this.loadProduits();
   }
 
+  onSearchInput(event: any) {
+    this.searchQuery = event.target.value;
+    this.filterProduits();
+  }
+
+  clearSearch() {
+    this.searchQuery = '';
+    this.filteredProduits = [...this.produits];
+  }
+
+  private filterProduits() {
+    if (!this.searchQuery.trim()) {
+      this.filteredProduits = [...this.produits];
+      return;
+    }
+
+    const query = this.searchQuery.toLowerCase().trim();
+    this.filteredProduits = this.produits.filter(produit =>
+      produit.titre?.toLowerCase().includes(query) ||
+      produit.description?.toLowerCase().includes(query) ||
+      produit.localisation?.toLowerCase().includes(query) ||
+      produit.categorie?.toLowerCase().includes(query)
+    );
+  }
+
   loadProduits() {
     this.isLoading = true;
     this.errorMessage = '';
 
-    // Load user's own products
-    this.produitService.getMesProduits().subscribe({
+    // Load user's own products with pagination
+    this.produitService.getMesProduits(this.currentPage, this.pageSize).subscribe({
       next: (response) => {
         this.isLoading = false;
         console.log('Mes produits response:', response);
         if (response.success) {
           this.produits = response.data?.produits || response.data || [];
-          this.totalItems = response.data?.pagination?.total || 0;
-          this.totalPages = response.data?.pagination?.totalPages || 0;
+          this.filteredProduits = [...this.produits];
+          this.totalItems = response.data?.pagination?.total || this.produits.length;
+          this.totalPages = response.data?.pagination?.totalPages || Math.ceil(this.produits.length / this.pageSize);
+          console.log('Pagination info:', {
+            totalItems: this.totalItems,
+            totalPages: this.totalPages,
+            currentPage: this.currentPage,
+            pageSize: this.pageSize
+          });
         } else {
           this.errorMessage = response.message || 'Erreur lors du chargement des produits';
         }
@@ -98,6 +138,7 @@ export class List implements OnInit {
       default: return statut;
     }
   }
+  
 
   editProduct(produit: any) {
     this.router.navigate(['/produits', produit.id, 'edit']);
@@ -125,7 +166,10 @@ export class List implements OnInit {
   onPageChange(event: any) {
     this.currentPage = event.pageIndex + 1;
     this.pageSize = event.pageSize;
-    this.loadProduits();
+    // Only reload if not searching (search is client-side)
+    if (!this.searchQuery) {
+      this.loadProduits();
+    }
   }
 
   callUser(phoneNumber?: string) {

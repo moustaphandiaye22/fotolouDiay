@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {
   Product,
@@ -14,8 +14,8 @@ import {
   providedIn: 'root'
 })
 export class ProduitService {
-  private apiUrl = 'http://localhost:2025/api/produits';
-  private paiementsUrl = 'http://localhost:2025/api/paiements';
+  private apiUrl = 'http://localhost:2026/api/produits';
+  private paiementsUrl = 'http://localhost:2026/api/paiements';
 
   constructor(private http: HttpClient) {}
 
@@ -65,10 +65,13 @@ export class ProduitService {
   }
 
   // Get user's own products
-  getMesProduits(): Observable<any> {
+  getMesProduits(page: number = 1, limit: number = 20): Observable<any> {
     const token = localStorage.getItem('token');
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
-    return this.http.get(`${this.apiUrl}/mes-produits`, { headers });
+    const params = new HttpParams()
+      .set('page', page.toString())
+      .set('limite', limit.toString());
+    return this.http.get(`${this.apiUrl}/mes-produits`, { headers, params });
   }
 
   // Get product statistics

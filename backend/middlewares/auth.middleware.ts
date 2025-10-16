@@ -197,9 +197,10 @@ export const verifierProprieteProduit = async (req: Request, res: Response, next
       });
     }
 
-    // Les modérateurs et administrateurs peuvent modifier tous les produits
-    if (req.utilisateur?.role === RoleUtilisateur.MODERATEUR || 
-        req.utilisateur?.role === RoleUtilisateur.ADMINISTRATEUR) {
+    // Les modérateurs, administrateurs et vendeurs peuvent gérer leurs produits respectifs
+    if (req.utilisateur?.role === RoleUtilisateur.MODERATEUR ||
+        req.utilisateur?.role === RoleUtilisateur.ADMINISTRATEUR ||
+        req.utilisateur?.role === RoleUtilisateur.VENDEUR) {
       return next();
     }
 
