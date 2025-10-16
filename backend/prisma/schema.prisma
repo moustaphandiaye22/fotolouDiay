@@ -27,6 +27,7 @@ model Utilisateur {
   notifications  Notification[]
   vuesProduites  VueProduit[]
   paiements      Paiement[]
+  contactMessagesVendeur ContactMessage[] @relation("VendeurContactMessages")
 
   @@map("utilisateurs")
 }
@@ -52,6 +53,7 @@ model Produit {
   utilisateur     Utilisateur @relation(fields: [utilisateurId], references: [id], onDelete: Cascade)
   vuesProduites   VueProduit[]
   paiements       Paiement[]
+  contactMessages ContactMessage[]
 
   @@map("produits")
   @@index([statut])
@@ -134,9 +136,33 @@ model Transaction {
   @@index([statut])
 }
 
+model ContactMessage {
+  id              Int        @id @default(autoincrement())
+  nom             String
+  email           String
+  telephone       String?
+  sujet           String
+  message         String
+  produitId       Int?       // Optionnel, si le message concerne un produit spécifique
+  vendeurId       Int?       // Optionnel, si c'est une réponse à un vendeur spécifique
+  captcha         String?    // Réponse du captcha
+  statut          ContactStatus @default(EN_ATTENTE)
+  dateCreation    DateTime   @default(now())
+  dateModification DateTime  @updatedAt
+
+  // Relations
+  produit         Produit?   @relation(fields: [produitId], references: [id], onDelete: SetNull)
+  vendeur         Utilisateur? @relation("VendeurContactMessages", fields: [vendeurId], references: [id], onDelete: SetNull)
+
+  @@map("contact_messages")
+  @@index([statut])
+  @@index([dateCreation])
+}
+
 // Enums
 enum RoleUtilisateur {
   UTILISATEUR
+  VENDEUR
   MODERATEUR
   ADMINISTRATEUR
 
@@ -196,4 +222,12 @@ enum StatutTransaction {
   ANNULE
 
   @@map("statut_transaction")
+}
+
+enum ContactStatus {
+  EN_ATTENTE
+  TRAITE
+  IGNORE
+
+  @@map("contact_status")
 }

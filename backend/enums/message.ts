@@ -2,6 +2,7 @@
 
 export enum RoleUtilisateur {
   UTILISATEUR = 'UTILISATEUR',
+  VENDEUR = 'VENDEUR',
   MODERATEUR = 'MODERATEUR',
   ADMINISTRATEUR = 'ADMINISTRATEUR'
 }
@@ -57,7 +58,7 @@ export const MESSAGES_ERREUR = {
   // Erreurs de validation
   CHAMPS_REQUIS: 'Tous les champs requis doivent être remplis',
   EMAIL_INVALIDE: 'Format d\'email invalide',
-  MOT_DE_PASSE_TROP_COURT: 'Le mot de passe doit contenir au moins 6 caractères',
+  MOT_DE_PASSE_TROP_COURT: 'Le mot de passe doit contenir au moins 6 caractères et un chiffre',
   PRIX_INVALIDE: 'Le prix doit être un nombre positif',
   
   // Erreurs générales
@@ -82,10 +83,15 @@ export const MESSAGES_VALIDATION = {
 // Configuration des rôles et permissions
 export const PERMISSIONS = {
   [RoleUtilisateur.UTILISATEUR]: [
+    'lire_produits'
+  ],
+  [RoleUtilisateur.VENDEUR]: [
     'lire_produits',
     'creer_produit',
     'modifier_ses_produits',
-    'supprimer_ses_produits'
+    'supprimer_ses_produits',
+    'voir_ses_produits',
+    'gerer_ses_annonces'
   ],
   [RoleUtilisateur.MODERATEUR]: [
     'lire_produits',

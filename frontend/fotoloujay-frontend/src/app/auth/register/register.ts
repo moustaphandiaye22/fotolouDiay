@@ -5,8 +5,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSelectModule } from '@angular/material/select';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth';
+import { RoleUtilisateur } from '../../models';
 
 @Component({
   selector: 'app-register',
@@ -16,7 +18,8 @@ import { AuthService } from '../../services/auth';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSelectModule
   ],
   templateUrl: './register.html',
   styleUrl: './register.css'
@@ -27,8 +30,12 @@ export class Register {
     prenom: '',
     email: '',
     telephone: '',
-    motDePasse: ''
+    motDePasse: '',
+    role: RoleUtilisateur.VENDEUR
   };
+
+  // Expose enum to template
+  RoleUtilisateur = RoleUtilisateur;
 
   isLoading = false;
   errorMessage = '';
@@ -37,8 +44,15 @@ export class Register {
   constructor(private authService: AuthService, private router: Router) {}
 
   onSubmit() {
+    // Validation côté client avant envoi
     if (!this.registerData.nom || !this.registerData.email || !this.registerData.motDePasse) {
       this.errorMessage = 'Veuillez remplir les champs obligatoires';
+      return;
+    }
+
+    // Validation de la complexité du mot de passe
+    if (!this.validatePassword(this.registerData.motDePasse)) {
+      this.errorMessage = 'Le mot de passe doit contenir au moins 6 caractères avec au moins un chiffre';
       return;
     }
 
@@ -63,5 +77,11 @@ export class Register {
         this.errorMessage = error.error?.message || 'Erreur lors de l\'inscription';
       }
     });
+  }
+
+  private validatePassword(password: string): boolean {
+    // Au moins 6 caractères et au moins un chiffre
+    const passwordRegex = /^(?=.*\d).{6,}$/;
+    return passwordRegex.test(password);
   }
 }

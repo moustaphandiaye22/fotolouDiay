@@ -29,13 +29,20 @@ export interface Product {
   };
 }
 
+export enum ModeLivraison {
+  RETRAIT = 'RETRAIT',
+  LIVRAISON = 'LIVRAISON',
+  LES_DEUX = 'LES_DEUX'
+}
+
 export interface CreateProductData {
   titre: string;
   description: string;
   prix: number;
   estVip?: boolean;
-  localisation?: string;
-  categorie?: string;
+  localisation: string;
+  categorie: string;
+  modeLivraison: ModeLivraison;
   photo?: File;
   photosSupplementaires?: File[];
 }
@@ -51,11 +58,13 @@ export interface UpdateProductData {
 }
 
 export interface ProductStats {
-  totalProduits: number;
-  produitsEnAttente: number;
-  produitsValides: number;
-  produitsVips: number;
-  vuesTotales: number;
+  total: number;
+  enAttente: number;
+  valides: number;
+  rejetes: number;
+  expires: number;
+  vip: number;
+  totalVues?: number;
 }
 
 export enum PaymentProvider {

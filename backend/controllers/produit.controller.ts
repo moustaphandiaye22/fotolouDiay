@@ -406,7 +406,7 @@ export class ControleurProduit {
       const utilisateurId = req.utilisateur?.id;
       const role = req.utilisateur?.role;
 
-      // Seuls les modérateurs/admins peuvent voir toutes les statistiques
+      // Les modérateurs/admins peuvent voir toutes les statistiques, les vendeurs voient les leurs
       const idUtilisateur = (role === RoleUtilisateur.MODERATEUR || role === RoleUtilisateur.ADMINISTRATEUR)
         ? undefined
         : utilisateurId;

@@ -27,15 +27,15 @@ exports.validationInscription = [
         .normalizeEmail(),
     (0, express_validator_1.body)('telephone')
         .optional()
-        .isMobilePhone('fr-FR')
-        .withMessage('Numéro de téléphone invalide'),
+        .matches(/^(\+221|221)?[76-8][0-9]{7,8}$/)
+        .withMessage('Numéro de téléphone sénégalais invalide (format: 77xxxxxxx ou 77xxxxxxxx)'),
     (0, express_validator_1.body)('motDePasse')
         .notEmpty()
         .withMessage(message_1.MESSAGES_VALIDATION.MOT_DE_PASSE_REQUIS)
         .isLength({ min: 6, max: 100 })
         .withMessage('Le mot de passe doit contenir entre 6 et 100 caractères')
-        .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/)
-        .withMessage('Le mot de passe doit contenir au moins une minuscule, une majuscule et un chiffre')
+        .matches(/^(?=.*\d)/)
+        .withMessage('Le mot de passe doit contenir au moins un chiffre')
 ];
 /**
  * Validateurs pour la connexion
@@ -63,8 +63,8 @@ exports.validationChangementMotDePasse = [
         .withMessage('Le nouveau mot de passe est requis')
         .isLength({ min: 6, max: 100 })
         .withMessage('Le nouveau mot de passe doit contenir entre 6 et 100 caractères')
-        .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/)
-        .withMessage('Le nouveau mot de passe doit contenir au moins une minuscule, une majuscule et un chiffre')
+        .matches(/^(?=.*\d)/)
+        .withMessage('Le nouveau mot de passe doit contenir au moins un chiffre')
 ];
 /**
  * Validateurs pour les produits

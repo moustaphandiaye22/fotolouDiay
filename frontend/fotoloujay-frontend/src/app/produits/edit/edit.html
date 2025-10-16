@@ -1,0 +1,200 @@
+<div class="edit-product-container">
+  <div class="form-header">
+    <h1>{{ isEditing ? 'Modifier le produit' : 'Créer un nouveau produit' }}</h1>
+    <p>{{ isEditing ? 'Modifiez les informations de votre produit' : 'Ajoutez un nouveau produit à votre catalogue' }}</p>
+  </div>
+
+  <!-- Success Message -->
+  <div *ngIf="successMessage" class="success-message">
+    <mat-icon>check_circle</mat-icon>
+    {{ successMessage }}
+  </div>
+
+  <!-- Error Message -->
+  <div *ngIf="errorMessage" class="error-message">
+    <mat-icon>error</mat-icon>
+    {{ errorMessage }}
+  </div>
+
+  <form (ngSubmit)="onSubmit()" #productForm="ngForm">
+    <!-- Camera Section (only for new products) -->
+    <div class="camera-section" *ngIf="!isEditing">
+      <div class="camera-container">
+        <video
+          #cameraVideo
+          *ngIf="isCameraActive && !imagePreview"
+          class="camera-feed"
+          autoplay
+          playsinline
+          muted>
+        </video>
+
+        <!-- Camera placeholder when not active -->
+        <div class="camera-placeholder" *ngIf="!isCameraActive && !imagePreview">
+          <mat-icon>camera_alt</mat-icon>
+          <p>Cliquez sur "Démarrer la caméra" pour prendre une photo</p>
+        </div>
+
+        <!-- Image preview -->
+        <div class="image-preview" *ngIf="imagePreview">
+          <img [src]="imagePreview" alt="Aperçu de l'image">
+        </div>
+
+        <!-- Camera controls -->
+        <div class="camera-controls" *ngIf="!imagePreview">
+          <button
+            type="button"
+            mat-raised-button
+            color="primary"
+            (click)="startCamera()"
+            *ngIf="!isCameraActive">
+            <mat-icon>camera</mat-icon>
+            Démarrer la caméra
+          </button>
+
+          <button
+            type="button"
+            mat-raised-button
+            color="accent"
+            (click)="retryCamera()"
+            *ngIf="isCameraActive && !isCapturing">
+            <mat-icon>refresh</mat-icon>
+            Réessayer
+          </button>
+
+          <button
+            type="button"
+            mat-raised-button
+            color="primary"
+            (click)="capturePhoto()"
+            *ngIf="isCameraActive && !isCapturing"
+            [disabled]="isCapturing">
+            <mat-icon>{{ isCapturing ? 'hourglass_empty' : 'camera' }}</mat-icon>
+            {{ isCapturing ? 'Capture en cours...' : 'Prendre la photo' }}
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Information -->
+    <div class="form-section">
+      <h2>Informations du produit</h2>
+
+      <!-- Image preview for editing mode -->
+      <div class="image-preview-edit" *ngIf="isEditing && imagePreview">
+        <img [src]="imagePreview" alt="Image actuelle du produit">
+        <p>Image actuelle du produit</p>
+      </div>
+
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Titre du produit</mat-label>
+          <input
+            matInput
+            [(ngModel)]="produit.titre"
+            name="titre"
+            required
+            placeholder="Ex: iPhone 13 Pro Max">
+        </mat-form-field>
+      </div>
+
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Description</mat-label>
+          <textarea
+            matInput
+            [(ngModel)]="produit.description"
+            name="description"
+            required
+            rows="4"
+            placeholder="Décrivez votre produit en détail...">
+          </textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="half-width">
+          <mat-label>Prix (FCFA)</mat-label>
+          <input
+            matInput
+            type="number"
+            [(ngModel)]="produit.prix"
+            name="prix"
+            required
+            min="0"
+            placeholder="0">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="half-width">
+          <mat-label>Localisation</mat-label>
+          <input
+            matInput
+            [(ngModel)]="produit.localisation"
+            name="localisation"
+            required
+            placeholder="Ex: Dakar, Plateau">
+        </mat-form-field>
+      </div>
+
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="half-width">
+          <mat-label>Catégorie</mat-label>
+          <input
+            matInput
+            [(ngModel)]="produit.categorie"
+            name="categorie"
+            required
+            placeholder="Ex: Électronique, Vêtements...">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="half-width">
+          <mat-label>Mode de livraison</mat-label>
+          <mat-select [(ngModel)]="produit.modeLivraison" name="modeLivraison" required>
+            <mat-option [value]="ModeLivraison.RETRAIT">Retrait sur place</mat-option>
+            <mat-option [value]="ModeLivraison.LIVRAISON">Livraison</mat-option>
+            <mat-option [value]="ModeLivraison.LES_DEUX">Les deux</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="form-row">
+        <mat-checkbox
+          [(ngModel)]="produit.estVip"
+          name="estVip"
+          class="vip-checkbox">
+          Produit VIP (mise en avant)
+        </mat-checkbox>
+      </div>
+    </div>
+
+    <!-- Action buttons -->
+    <div class="form-actions">
+      <button
+        type="button"
+        mat-stroked-button
+        (click)="retakePhoto()"
+        *ngIf="imagePreview && !isEditing">
+        <mat-icon>refresh</mat-icon>
+        Reprendre la photo
+      </button>
+
+      <div class="spacer"></div>
+
+      <button
+        type="button"
+        mat-button
+        (click)="router.navigate(['/vendor-dashboard'])">
+        Annuler
+      </button>
+
+      <button
+        type="submit"
+        mat-raised-button
+        color="primary"
+        [disabled]="isSubmitting">
+        <mat-icon>{{ isSubmitting ? 'hourglass_empty' : (isEditing ? 'edit' : 'add') }}</mat-icon>
+        {{ isSubmitting ? 'Enregistrement...' : (isEditing ? 'Modifier' : 'Créer') }}
+      </button>
+    </div>
+  </form>
+</div>

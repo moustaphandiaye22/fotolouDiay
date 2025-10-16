@@ -10,6 +10,7 @@ import { routesProduit } from './routes/produit.routes';
 import { routesNotification } from './routes/notification.routes';
 import { routesAuth } from './routes/auth.routes';
 import { routesPaiement } from './routes/payment.routes';
+import contactRoutes from './routes/contact.routes';
 
 // Configuration des variables d'environnement
 dotenv.config();
@@ -83,6 +84,7 @@ app.use('/api/utilisateurs', routesUtilisateur);
 app.use('/api/produits', routesProduit);
 app.use('/api/notifications', routesNotification);
 app.use('/api/paiements', routesPaiement);
+app.use('/api/contacts', contactRoutes);
 
 // Route de santé
 app.get('/api/health', (req, res) => {

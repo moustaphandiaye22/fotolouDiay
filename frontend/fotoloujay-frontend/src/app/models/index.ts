@@ -6,3 +6,6 @@ export * from './product.model';
 
 // Notification models
 export * from './notification.model';
+
+// Contact models
+export * from './contact.model';

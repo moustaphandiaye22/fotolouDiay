@@ -81,15 +81,15 @@ routesProduit.get('/vip', authentificationOptionnelle, ControleurProduit.obtenir
 
 /**
  * @route GET /api/produits/statistiques
- * @desc Récupérer les statistiques des produits
- * @access Private
+ * @desc Récupérer les statistiques des produits (vendeurs voient leurs propres statistiques)
+ * @access Private (Tous les utilisateurs connectés)
  */
 routesProduit.get('/statistiques', verifierToken, ControleurProduit.obtenirStatistiques);
 
 /**
  * @route GET /api/produits/mes-produits
- * @desc Récupérer les produits de l'utilisateur connecté
- * @access Private
+ * @desc Récupérer les produits de l'utilisateur connecté (vendeurs peuvent voir leurs produits)
+ * @access Private (Tous les utilisateurs connectés)
  */
 routesProduit.get('/mes-produits', verifierToken, ControleurProduit.obtenirMesProduits);
 

@@ -12,13 +12,16 @@ import { FormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
 import { ProduitService } from '../../services/produit';
 import { AuthService } from '../../services/auth';
+import { ContactService } from '../../services/contact';
 import { Product, RoleUtilisateur, PaymentProvider, PaymentInitiationRequest } from '../../models';
+import { ContactMessage } from '../../models/contact.model';
 import { PaymentDialog } from './payment-dialog';
 
 @Component({
   selector: 'app-detail',
   imports: [
     CommonModule,
+    FormsModule,
     MatCardModule,
     MatButtonModule,
     MatIconModule,
@@ -39,11 +42,26 @@ export class Detail implements OnInit {
   isProcessingPayment = false;
   paymentError = '';
 
+  // Propriétés pour le dialog de contact
+  showContactDialog = false;
+  contactMessage: ContactMessage = {
+    nom: '',
+    email: '',
+    telephone: '',
+    sujet: 'INFORMATION',
+    message: '',
+    statut: 'EN_ATTENTE' as any
+  };
+  isSendingMessage = false;
+  contactErrorMessage = '';
+  contactSuccessMessage = '';
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private produitService: ProduitService,
     private authService: AuthService,
+    private contactService: ContactService,
     private dialog: MatDialog
   ) {}
 
@@ -236,5 +254,80 @@ export class Detail implements OnInit {
 
   goBackToProducts() {
     this.router.navigate(['/produits']);
+  }
+
+  callUser(telephone?: string) {
+    if (telephone) {
+      window.location.href = `tel:${telephone}`;
+    }
+  }
+
+  whatsappUser(telephone?: string, titre?: string) {
+    if (telephone) {
+      const message = titre ? `Bonjour, je suis intéressé par votre produit: ${titre}` : 'Bonjour, je suis intéressé par votre produit';
+      const whatsappUrl = `https://wa.me/${telephone.replace(/\s+/g, '')}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+  }
+
+  messageUser(produit: Product) {
+    // Pour l'instant, ouvrir WhatsApp avec un message personnalisé
+    // Plus tard, on pourra implémenter un système de messagerie interne
+    this.whatsappUser(produit.utilisateur?.telephone, produit.titre);
+  }
+
+  sendContactMessage() {
+    if (!this.produit) {
+      return;
+    }
+
+    if (!this.contactMessage.nom || !this.contactMessage.email || !this.contactMessage.message) {
+      this.contactErrorMessage = 'Veuillez remplir tous les champs obligatoires.';
+      return;
+    }
+
+    // Validation email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(this.contactMessage.email)) {
+      this.contactErrorMessage = 'Format d\'email invalide.';
+      return;
+    }
+
+    this.isSendingMessage = true;
+    this.contactErrorMessage = '';
+    this.contactSuccessMessage = '';
+
+    // Préparer le message avec les informations du produit
+    const messageComplet = `${this.contactMessage.message}\n\n---\nProduit: ${this.produit.titre}\nPrix: ${this.formatPrix(this.produit.prix)}\nVendeur: ${this.produit.utilisateur?.nom} ${this.produit.utilisateur?.prenom}`;
+
+    const contactData = {
+      ...this.contactMessage,
+      message: messageComplet,
+      produitId: this.produit.id,
+      vendeurId: this.produit.utilisateurId
+    };
+
+    this.contactService.sendContactMessage(contactData).subscribe({
+      next: (response) => {
+        this.isSendingMessage = false;
+        this.contactSuccessMessage = 'Votre message a été envoyé avec succès. Le vendeur vous répondra bientôt.';
+        this.resetContactForm();
+      },
+      error: (error) => {
+        this.isSendingMessage = false;
+        this.contactErrorMessage = error.error?.message || 'Une erreur est survenue lors de l\'envoi du message.';
+      }
+    });
+  }
+
+  resetContactForm() {
+    this.contactMessage = {
+      nom: '',
+      email: '',
+      telephone: '',
+      sujet: 'INFORMATION',
+      message: '',
+      statut: 'EN_ATTENTE' as any
+    };
   }
 }

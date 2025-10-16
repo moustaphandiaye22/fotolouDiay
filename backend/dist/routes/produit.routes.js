@@ -64,14 +64,14 @@ exports.routesProduit.get('/publics', auth_middleware_1.authentificationOptionne
 exports.routesProduit.get('/vip', auth_middleware_1.authentificationOptionnelle, produit_controller_1.ControleurProduit.obtenirProduitsVip);
 /**
  * @route GET /api/produits/statistiques
- * @desc Récupérer les statistiques des produits
- * @access Private
+ * @desc Récupérer les statistiques des produits (vendeurs voient leurs propres statistiques)
+ * @access Private (Tous les utilisateurs connectés)
  */
 exports.routesProduit.get('/statistiques', auth_middleware_1.verifierToken, produit_controller_1.ControleurProduit.obtenirStatistiques);
 /**
  * @route GET /api/produits/mes-produits
- * @desc Récupérer les produits de l'utilisateur connecté
- * @access Private
+ * @desc Récupérer les produits de l'utilisateur connecté (vendeurs peuvent voir leurs produits)
+ * @access Private (Tous les utilisateurs connectés)
  */
 exports.routesProduit.get('/mes-produits', auth_middleware_1.verifierToken, produit_controller_1.ControleurProduit.obtenirMesProduits);
 /**

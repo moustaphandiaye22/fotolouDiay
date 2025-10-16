@@ -1,0 +1,127 @@
+<div class="contact-container">
+  <div class="contact-card">
+    <div class="contact-header">
+      <h1>Nous contacter</h1>
+      <p>Envoyez-nous un message et nous vous répondrons dans les plus brefs délais</p>
+    </div>
+
+    <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="contact-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nom">Nom complet *</label>
+          <input
+            type="text"
+            id="nom"
+            name="nom"
+            [(ngModel)]="contactMessage.nom"
+            required
+            class="form-control"
+            placeholder="Votre nom">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            [(ngModel)]="contactMessage.email"
+            required
+            class="form-control"
+            placeholder="votre.email@example.com">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="telephone">Téléphone</label>
+          <input
+            type="tel"
+            id="telephone"
+            name="telephone"
+            [(ngModel)]="contactMessage.telephone"
+            class="form-control"
+            placeholder="+221 XX XXX XX XX">
+        </div>
+
+        <div class="form-group">
+          <label for="sujet">Sujet *</label>
+          <select
+            id="sujet"
+            name="sujet"
+            [(ngModel)]="contactMessage.sujet"
+            required
+            class="form-control">
+            <option value="">Sélectionner un sujet</option>
+            <option value="INFORMATION">Demande d'information</option>
+            <option value="SUPPORT">Support technique</option>
+            <option value="SIGNALEMENT">Signalement</option>
+            <option value="PARTENARIAT">Partenariat</option>
+            <option value="AUTRE">Autre</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea
+          id="message"
+          name="message"
+          [(ngModel)]="contactMessage.message"
+          required
+          rows="6"
+          class="form-control"
+          placeholder="Décrivez votre demande en détail..."></textarea>
+      </div>
+
+      <!-- Section CAPTCHA -->
+      <div class="captcha-section" *ngIf="showCaptcha">
+        <div class="captcha-container">
+          <div class="captcha-challenge">
+            <img *ngIf="captchaImage" [src]="captchaImage" alt="CAPTCHA" />
+            <button type="button" class="refresh-captcha" (click)="refreshCaptcha()">
+              <mat-icon>refresh</mat-icon>
+            </button>
+          </div>
+          <div class="captcha-input">
+            <input
+              type="text"
+              [(ngModel)]="captchaResponse"
+              name="captcha"
+              required
+              class="form-control"
+              placeholder="Tapez le texte de l'image">
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="errorMessage" class="error-message">
+        <mat-icon>error</mat-icon>
+        {{ errorMessage }}
+      </div>
+
+      <div *ngIf="successMessage" class="success-message">
+        <mat-icon>check_circle</mat-icon>
+        {{ successMessage }}
+      </div>
+
+      <div class="form-actions">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          (click)="resetForm()"
+          [disabled]="isSubmitting">
+          Réinitialiser
+        </button>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="!contactForm.form.valid || isSubmitting">
+          <mat-icon *ngIf="!isSubmitting">send</mat-icon>
+          <mat-spinner *ngIf="isSubmitting" diameter="20"></mat-spinner>
+          {{ isSubmitting ? 'Envoi en cours...' : 'Envoyer le message' }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

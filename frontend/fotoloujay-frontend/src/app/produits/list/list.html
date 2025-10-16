@@ -12,6 +12,21 @@
     </div>
   </div>
 
+  <!-- Search Bar -->
+  <div class="search-container">
+    <mat-form-field appearance="outline" class="search-field">
+      <mat-label>Rechercher mes produits</mat-label>
+      <input matInput
+             [(ngModel)]="searchQuery"
+             (input)="onSearchInput($event)"
+             placeholder="Titre, description, localisation...">
+      <mat-icon matPrefix>search</mat-icon>
+      <button matSuffix mat-icon-button *ngIf="searchQuery" (click)="clearSearch()">
+        <mat-icon>clear</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+
   <div *ngIf="isLoading" class="loading">
     <mat-spinner diameter="50"></mat-spinner>
     <p>Chargement de vos produits...</p>
@@ -31,8 +46,8 @@
     </button>
   </div>
 
-  <div *ngIf="!isLoading && produits.length > 0" [class]="viewMode === 'grid' ? 'produits-grid' : 'produits-list'">
-    <mat-card *ngFor="let produit of produits" class="produit-card" [routerLink]="['/produits', produit.id]">
+  <div *ngIf="!isLoading && filteredProduits.length > 0" [class]="viewMode === 'grid' ? 'produits-grid' : 'produits-list'">
+    <mat-card *ngFor="let produit of filteredProduits" class="produit-card" [routerLink]="['/produits', produit.id]">
       <div class="product-image">
         <img [src]="produit.imageUrl || '/assets/placeholder.jpg'" [alt]="produit.titre">
         <div class="product-badges">
@@ -107,6 +122,17 @@
   </div>
 
   <!-- Pagination -->
+  <!-- No results message when search has no matches -->
+  <div *ngIf="!isLoading && searchQuery && filteredProduits.length === 0" class="no-results">
+    <mat-icon class="large-icon">search_off</mat-icon>
+    <h3>Aucun résultat</h3>
+    <p>Aucun produit ne correspond à votre recherche "{{ searchQuery }}".</p>
+    <button mat-button (click)="clearSearch()">
+      <mat-icon>clear</mat-icon>
+      Effacer la recherche
+    </button>
+  </div>
+
   <div *ngIf="!isLoading && !errorMessage && totalPages > 1" class="pagination-container">
     <mat-paginator
       [length]="totalItems"

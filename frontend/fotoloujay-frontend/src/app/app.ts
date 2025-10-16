@@ -89,7 +89,7 @@ export class App implements OnInit, OnDestroy {
   }
 
   private loadUnreadNotificationsCount() {
-    if (this.currentUser && this.currentUser.role !== 'UTILISATEUR') {
+    if (this.currentUser && (this.currentUser.role === 'VENDEUR' || this.currentUser.role === 'MODERATEUR' || this.currentUser.role === 'ADMINISTRATEUR')) {
       this.notificationSubscription = this.notificationService.getNotifications().subscribe({
         next: (response) => {
           if (response.success) {
@@ -142,6 +142,7 @@ export class App implements OnInit, OnDestroy {
     switch (role) {
       case 'ADMINISTRATEUR': return 'Admin';
       case 'MODERATEUR': return 'Modérateur';
+      case 'VENDEUR': return 'Vendeur';
       case 'UTILISATEUR': return 'Utilisateur';
       default: return role;
     }

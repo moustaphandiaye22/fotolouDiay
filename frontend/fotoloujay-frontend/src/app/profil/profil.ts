@@ -128,7 +128,7 @@ export class Profil implements OnInit {
       next: (response: any) => {
         this.isLoadingStats = false;
         if (response.success) {
-          this.productStats = response.data;
+          this.productStats = response.data.statistiques;
         }
       },
       error: (error) => {

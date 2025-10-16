@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ProduitService } from '../../services/produit';
+import { ModeLivraison } from '../../models';
 
 @Component({
   selector: 'app-create',
@@ -18,6 +19,8 @@ export class Create implements AfterViewInit, OnDestroy {
     description: '',
     prix: 0,
     localisation: '',
+    categorie: '',
+    modeLivraison: ModeLivraison.RETRAIT,
     estVip: false
   };
 
@@ -164,6 +167,8 @@ export class Create implements AfterViewInit, OnDestroy {
       description: '',
       prix: 0,
       localisation: '',
+      categorie: '',
+      modeLivraison: ModeLivraison.RETRAIT,
       estVip: false
     };
   }
@@ -174,7 +179,7 @@ export class Create implements AfterViewInit, OnDestroy {
       return;
     }
 
-    if (!this.produit.titre || !this.produit.description || !this.produit.prix) {
+    if (!this.produit.titre || !this.produit.description || !this.produit.prix || !this.produit.localisation || !this.produit.categorie || !this.produit.modeLivraison) {
       this.errorMessage = 'Veuillez remplir tous les champs obligatoires';
       return;
     }
@@ -188,12 +193,14 @@ export class Create implements AfterViewInit, OnDestroy {
     formData.append('description', this.produit.description);
     formData.append('prix', this.produit.prix.toString());
     formData.append('localisation', this.produit.localisation);
+    formData.append('categorie', this.produit.categorie);
+    formData.append('modeLivraison', this.produit.modeLivraison);
     formData.append('estVip', this.produit.estVip.toString());
 
     this.produitService.createProduit(formData).subscribe({
       next: (response) => {
         if (response.success) {
-          this.router.navigate(['/produits/mes-produits']);
+          this.router.navigate(['/vendor-dashboard']);
         } else {
           this.errorMessage = response.message || 'Erreur lors de la création du produit';
           this.isSubmitting = false;

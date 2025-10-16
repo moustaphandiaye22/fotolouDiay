@@ -1,0 +1,161 @@
+<div class="vendor-dashboard">
+  <div class="dashboard-header">
+    <h1>Tableau de bord Vendeur</h1>
+    <p>Gérez vos annonces et suivez vos statistiques</p>
+  </div>
+
+  <!-- Error Message -->
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Loading Spinner -->
+  <div *ngIf="isLoading" class="loading-container">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <!-- Stats Cards -->
+  <div class="stats-grid" *ngIf="stats && !isLoading">
+    <mat-card class="stat-card">
+      <mat-card-content>
+        <div class="stat-icon">
+          <mat-icon>inventory_2</mat-icon>
+        </div>
+        <div class="stat-info">
+          <h3>{{ stats.total }}</h3>
+          <p>Total Produits</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="stat-card">
+      <mat-card-content>
+        <div class="stat-icon">
+          <mat-icon>check_circle</mat-icon>
+        </div>
+        <div class="stat-info">
+          <h3>{{ stats.valides }}</h3>
+          <p>Produits Validés</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="stat-card">
+      <mat-card-content>
+        <div class="stat-icon">
+          <mat-icon>pending</mat-icon>
+        </div>
+        <div class="stat-info">
+          <h3>{{ stats.enAttente }}</h3>
+          <p>En Attente</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="stat-card">
+      <mat-card-content>
+        <div class="stat-icon">
+          <mat-icon>visibility</mat-icon>
+        </div>
+        <div class="stat-info">
+          <h3>{{ stats.totalVues || 0 }}</h3>
+          <p>Total Vues</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Products Management -->
+  <div class="products-section" *ngIf="!isLoading">
+    <div class="section-header">
+      <h2>Mes Produits</h2>
+      <button mat-raised-button color="primary" routerLink="/produits/create">
+        <mat-icon>add</mat-icon>
+        Ajouter un Produit
+      </button>
+    </div>
+
+    <!-- Products Table -->
+    <div class="products-table-container" *ngIf="myProducts.length > 0">
+      <table mat-table [dataSource]="myProducts" class="products-table">
+        <!-- Title Column -->
+        <ng-container matColumnDef="titre">
+          <th mat-header-cell *matHeaderCellDef>Titre</th>
+          <td mat-cell *matCellDef="let product">
+            <div class="product-title">
+              <img [src]="product.imageUrl" [alt]="product.titre" class="product-thumbnail">
+              <span>{{ product.titre }}</span>
+            </div>
+          </td>
+        </ng-container>
+
+        <!-- Status Column -->
+        <ng-container matColumnDef="statut">
+          <th mat-header-cell *matHeaderCellDef>Statut</th>
+          <td mat-cell *matCellDef="let product">
+            <mat-chip [color]="getStatutColor(product.statut)" selected>
+              {{ getStatutLabel(product.statut) }}
+            </mat-chip>
+          </td>
+        </ng-container>
+
+        <!-- Price Column -->
+        <ng-container matColumnDef="prix">
+          <th mat-header-cell *matHeaderCellDef>Prix</th>
+          <td mat-cell *matCellDef="let product">{{ formatPrix(product.prix) }}</td>
+        </ng-container>
+
+        <!-- Views Column -->
+        <ng-container matColumnDef="vues">
+          <th mat-header-cell *matHeaderCellDef>Vues</th>
+          <td mat-cell *matCellDef="let product">{{ product.vues }}</td>
+        </ng-container>
+
+        <!-- Date Column -->
+        <ng-container matColumnDef="dateCreation">
+          <th mat-header-cell *matHeaderCellDef>Date de création</th>
+          <td mat-cell *matCellDef="let product">{{ product.dateCreation | date:'dd/MM/yyyy' }}</td>
+        </ng-container>
+
+        <!-- Actions Column -->
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef>Actions</th>
+          <td mat-cell *matCellDef="let product">
+            <button mat-icon-button [routerLink]="['/produits', product.id]">
+              <mat-icon>visibility</mat-icon>
+            </button>
+            <button mat-icon-button (click)="editProduct(product)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" (click)="deleteProduct(product)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+      <!-- Pagination -->
+      <mat-paginator
+        [length]="totalProducts"
+        [pageSize]="pageSize"
+        [pageSizeOptions]="[5, 10, 20]"
+        (page)="onPageChange($event)"
+        showFirstLastButtons>
+      </mat-paginator>
+    </div>
+
+    <!-- Empty State -->
+    <div class="empty-state" *ngIf="myProducts.length === 0">
+      <mat-icon>inventory_2</mat-icon>
+      <h3>Aucun produit trouvé</h3>
+      <p>Vous n'avez pas encore créé de produits. Commencez par ajouter votre premier produit !</p>
+      <button mat-raised-button color="primary" routerLink="/produits/create">
+        <mat-icon>add</mat-icon>
+        Créer mon premier produit
+      </button>
+    </div>
+  </div>
+</div>

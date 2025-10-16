@@ -6,7 +6,7 @@ import { Observable, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:2025/api/auth';
+  private apiUrl = 'http://localhost:2026/api/auth';
 
   constructor(private http: HttpClient) {}
 
@@ -83,5 +83,32 @@ export class AuthService {
       }
     }
     return null;
+  }
+
+  getUsers(params?: { page?: number; limite?: number; role?: string; estActif?: boolean }): Observable<any> {
+    const token = localStorage.getItem('token');
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+
+    let url = 'http://localhost:2026/api/utilisateurs';
+    const queryParams: string[] = [];
+
+    if (params) {
+      if (params.page) queryParams.push(`page=${params.page}`);
+      if (params.limite) queryParams.push(`limite=${params.limite}`);
+      if (params.role) queryParams.push(`role=${params.role}`);
+      if (params.estActif !== undefined) queryParams.push(`estActif=${params.estActif}`);
+    }
+
+    if (queryParams.length > 0) {
+      url += '?' + queryParams.join('&');
+    }
+
+    return this.http.get(url, { headers });
+  }
+
+  toggleUserStatus(userId: number): Observable<any> {
+    const token = localStorage.getItem('token');
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.http.put(`http://localhost:2026/api/utilisateurs/${userId}/statut`, {}, { headers });
   }
 }

@@ -3,21 +3,20 @@
 import { Router } from 'express';
 import { verifierToken, verifierRole } from '../middlewares/auth.middleware';
 import { RoleUtilisateur } from '../enums/message';
+import { ControleurUtilisateur } from '../controllers/utilisateur.controller';
 
 export const routesUtilisateur = Router();
 
 /**
  * @route GET /api/utilisateurs
  * @desc Récupérer tous les utilisateurs
- * @access Private (Admin)
+ * @access Private (Admin et Modérateur)
  */
 routesUtilisateur.get(
   '/',
   verifierToken,
-  verifierRole(RoleUtilisateur.ADMINISTRATEUR),
-  (req, res) => {
-    res.json({ message: 'Liste des utilisateurs - À implémenter' });
-  }
+  verifierRole(RoleUtilisateur.ADMINISTRATEUR, RoleUtilisateur.MODERATEUR),
+  ControleurUtilisateur.obtenirTous
 );
 
 /**
@@ -37,6 +36,18 @@ routesUtilisateur.get('/:id', verifierToken, (req, res) => {
 routesUtilisateur.put('/:id', verifierToken, (req, res) => {
   res.json({ message: 'Mise à jour utilisateur - À implémenter' });
 });
+
+/**
+ * @route PUT /api/utilisateurs/:id/statut
+ * @desc Changer le statut d'un utilisateur (activer/désactiver)
+ * @access Private (Admin)
+ */
+routesUtilisateur.put(
+  '/:id/statut',
+  verifierToken,
+  verifierRole(RoleUtilisateur.ADMINISTRATEUR),
+  ControleurUtilisateur.changerStatut
+);
 
 /**
  * @route DELETE /api/utilisateurs/:id

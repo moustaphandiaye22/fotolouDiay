@@ -1900,3 +1900,927 @@
 {"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:33:19.189Z"}
 {"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:33:28.584Z"}
 {"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:33:28.586Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:43:47.121Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:43:47.123Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:43:47.268Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:43:47.269Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:45:27.559Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:45:27.563Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:45:27.642Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:45:27.644Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:45:37.602Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:45:37.605Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:45:37.658Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:45:37.659Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:45:46.571Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:45:46.574Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:45:46.628Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:45:46.629Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:47:22.113Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:47:22.115Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:47:22.185Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:47:22.187Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:47:27.082Z"}
+{"level":"info","message":"GET /api/produits/19 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:47:27.087Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:47:48.694Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:47:48.697Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:48:21.619Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:48:21.622Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:48:34.462Z"}
+{"level":"info","message":"GET /api/produits/mes-produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:48:34.464Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:48:34.465Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:53:39.291Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:53:39.293Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:53:39.449Z"}
+{"level":"info","message":"GET /api/produits/mes-produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:53:39.463Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:53:39.465Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:53:47.079Z"}
+{"level":"info","message":"GET /api/produits/mes-produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:53:47.081Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:53:47.084Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:54:49.338Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:54:49.342Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:54:49.411Z"}
+{"level":"info","message":"GET /api/produits/mes-produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:54:49.424Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:54:49.427Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:54:52.145Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:54:52.147Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:55:04.139Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:55:04.142Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:55:04.307Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:55:04.308Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:55:09.587Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:55:09.592Z"}
+{"level":"info","message":"GET /api/produits/8 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:55:45.829Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:55:45.833Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:55:49.829Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:55:49.832Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:56:07.644Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:56:12.673Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T21:56:12.676Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:00:05.965Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:00:05.969Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:00:12.791Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:00:12.793Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:01:12.407Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:01:12.410Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:01:12.518Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:01:12.520Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:01:17.221Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:01:17.223Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:01:20.408Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:01:20.413Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:01:33.238Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:01:33.240Z"}
+{"level":"info","message":"GET /api/produits/mes-produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:01:33.241Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:01:42.874Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:01:42.878Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:02:20.349Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:02:23.562Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:02:23.567Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:03:08.294Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:03:08.296Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:06:16.742Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:06:16.746Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:06:16.911Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:06:16.913Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:06:29.618Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:06:29.621Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:06:29.857Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:06:29.859Z"}
+{"level":"info","message":"POST /api/auth/deconnexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:06:48.485Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:06:48.583Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:06:48.587Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:06:58.295Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:06:58.297Z"}
+{"level":"info","message":"Arrêt du serveur en cours...","service":"fotoloujay-backend","timestamp":"2025-10-15T22:07:07.073Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-15T22:07:12.817Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 2025","service":"fotoloujay-backend","timestamp":"2025-10-15T22:07:12.822Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:2025/api","service":"fotoloujay-backend","timestamp":"2025-10-15T22:07:12.822Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:25:53.730Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:25:53.737Z"}
+{"level":"info","message":"POST /api/auth/connexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:26:29.135Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:26:29.473Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:26:29.522Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:26:29.539Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:26:29.544Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:26:40.366Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:26:40.373Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:27:03.117Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:27:03.119Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:28:20.621Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:28:20.626Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:29:12.471Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:29:12.474Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:29:18.115Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:29:18.119Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:30:37.644Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:30:37.649Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:30:55.836Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:31:00.207Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:31:00.208Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:31:02.021Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:31:02.026Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:31:04.728Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:31:15.604Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:31:15.609Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:31:16.807Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:31:17.823Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:31:17.825Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:31:19.071Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:31:19.083Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:31:19.724Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:31:24.337Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:31:24.341Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:34:08.905Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:34:10.392Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:34:10.401Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:34:15.854Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:34:15.857Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:34:24.765Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:34:24.769Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:34:26.259Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:34:32.390Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:34:32.396Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:47:35.165Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:47:35.171Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:47:35.471Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:47:35.474Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:47:42.260Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:47:42.262Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:47:42.523Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:47:42.526Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:49:14.910Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:49:14.954Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:49:17.762Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:49:17.871Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:51:16.294Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:51:16.306Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:51:31.909Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:51:43.243Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:51:52.109Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:51:56.758Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:51:56.786Z"}
+{"level":"info","message":"GET /api/produits/mes-produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:51:56.791Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T22:52:17.215Z"}
+{"level":"info","message":"Arrêt du serveur en cours...","service":"fotoloujay-backend","timestamp":"2025-10-15T22:52:47.233Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-15T23:01:22.916Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 2025","service":"fotoloujay-backend","timestamp":"2025-10-15T23:01:22.922Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:2025/api","service":"fotoloujay-backend","timestamp":"2025-10-15T23:01:22.923Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:02:56.647Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:02:56.660Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:02:56.903Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:03:02.907Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:03:02.921Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:03:02.926Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:03:12.779Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:03:12.782Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:03:14.823Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:03:14.827Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:03:14.830Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:03:16.031Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:04:54.370Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:04:54.372Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:04:54.521Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:04:56.156Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:04:56.160Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:04:56.164Z"}
+{"level":"info","message":"GET /api/produits/3 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:05:08.241Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:05:08.244Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:05:13.014Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:05:13.018Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:05:15.098Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:05:15.102Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:05:15.104Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:05:17.179Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:05:20.014Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:05:20.016Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:10:52.076Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:10:52.079Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:10:52.164Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:10:52.166Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:11:01.826Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:11:01.829Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:11:01.831Z"}
+{"level":"info","message":"GET /api/produits/18 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:11:10.762Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:11:10.767Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:11:15.271Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:11:15.275Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:11:21.548Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:11:23.327Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:11:23.334Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:11:23.340Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:15:13.147Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:15:13.156Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:15:13.495Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:15:13.501Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:15:13.512Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:15:41.473Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:15:41.478Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:15:41.649Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:15:41.658Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:15:41.663Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:15:47.368Z"}
+{"level":"info","message":"GET /api/produits/mes-produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:15:47.373Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:15:47.377Z"}
+{"level":"info","message":"POST /api/auth/deconnexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:15:51.143Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:15:51.234Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:15:51.236Z"}
+{"level":"info","message":"Arrêt du serveur en cours...","service":"fotoloujay-backend","timestamp":"2025-10-15T23:16:14.855Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-15T23:16:19.562Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 2025","service":"fotoloujay-backend","timestamp":"2025-10-15T23:16:19.568Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:2025/api","service":"fotoloujay-backend","timestamp":"2025-10-15T23:16:19.569Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:17:01.929Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:17:01.940Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:17:36.036Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:17:36.043Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:17:44.579Z"}
+{"level":"info","message":"POST /api/auth/connexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:17:59.833Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:18:00.426Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:18:00.442Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:18:00.448Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:18:00.464Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:18:12.384Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:18:12.391Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:18:12.398Z"}
+{"level":"info","message":"GET /api/produits/18 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:18:18.690Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:18:18.696Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:18:23.258Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:18:23.261Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:18:24.519Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:18:31.206Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:18:32.900Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:19:16.214Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:19:16.220Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:19:16.230Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:19:36.616Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:19:36.622Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:19:42.350Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:19:42.356Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:19:42.364Z"}
+{"level":"info","message":"PUT /api/utilisateurs/17/statut - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:20:13.574Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:20:27.195Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:20:27.203Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:20:27.595Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:20:27.599Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:20:27.604Z"}
+{"level":"info","message":"PUT /api/utilisateurs/17/statut - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:20:33.419Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-15T23:21:14.942Z"}
+{"level":"info","message":"GET /api/health - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:21:58.165Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-15T23:23:54.211Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:24:55.760Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:24:55.772Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:24:56.269Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:24:56.280Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:24:56.294Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:25:16.694Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:25:16.720Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:25:17.100Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:25:17.114Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:25:17.122Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:25:42.595Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:25:52.655Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:26:12.479Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:26:13.480Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:26:13.497Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:26:13.508Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:26:15.082Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-15T23:26:15.084Z"}
+{"level":"info","message":"Arrêt du serveur en cours...","service":"fotoloujay-backend","timestamp":"2025-10-16T00:43:44.002Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T07:56:10.891Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 2025","service":"fotoloujay-backend","timestamp":"2025-10-16T07:56:10.898Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:2025/api","service":"fotoloujay-backend","timestamp":"2025-10-16T07:56:10.899Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T07:56:37.255Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T07:56:37.412Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T07:56:37.424Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T07:57:29.519Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T07:57:30.809Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T07:57:32.394Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T07:57:32.398Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T07:57:39.693Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T07:57:39.699Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T07:57:39.706Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T07:58:15.813Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T07:58:30.020Z"}
+{"level":"info","message":"GET /api/produits/mes-produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T07:58:30.026Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T07:58:30.032Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T07:59:08.337Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T07:59:22.903Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T07:59:22.908Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T07:59:22.917Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T07:59:23.646Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T07:59:23.650Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:15:38.648Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:15:38.655Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:20:10.450Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:20:10.458Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:22:15.268Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:22:15.272Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:22:15.466Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:22:15.468Z"}
+{"level":"info","message":"POST /api/auth/deconnexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:27:03.074Z"}
+{"level":"info","message":"POST /api/auth/connexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:27:12.840Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:27:13.422Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:27:13.432Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:27:13.439Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:27:32.957Z"}
+{"level":"info","message":"GET /api/produits/mes-produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:27:32.962Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:27:32.971Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:27:47.788Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:27:47.804Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T08:38:59.742Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:43:07.808Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:43:10.644Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:43:10.647Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:43:16.006Z"}
+{"level":"info","message":"GET /api/produits/16 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:43:16.011Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:43:44.476Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:43:44.685Z"}
+{"level":"info","message":"GET /api/produits/16 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:43:44.712Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:43:46.776Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:43:46.779Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:43:48.497Z"}
+{"level":"info","message":"GET /api/produits/17 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:43:48.508Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:45:52.200Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:45:52.349Z"}
+{"level":"info","message":"GET /api/produits/17 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:45:52.363Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:45:53.955Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:45:53.959Z"}
+{"level":"info","message":"POST /api/auth/deconnexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:45:56.684Z"}
+{"level":"info","message":"GET /api/produits/16 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:45:59.417Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:46:00.977Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:46:00.981Z"}
+{"level":"info","message":"POST /api/auth/connexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:46:23.884Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:46:24.448Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:46:24.467Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:46:24.471Z"}
+{"level":"info","message":"GET /api/produits/16 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:46:36.732Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:46:36.737Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:46:40.906Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:46:40.910Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:46:59.268Z"}
+{"level":"info","message":"GET /api/produits/mes-produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:46:59.273Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:46:59.278Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:48:39.717Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:48:39.871Z"}
+{"level":"info","message":"GET /api/produits/mes-produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:48:39.894Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:48:39.899Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:49:08.319Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:49:08.482Z"}
+{"level":"info","message":"GET /api/produits/mes-produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:49:08.507Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:49:08.515Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:51:02.361Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:51:02.569Z"}
+{"level":"info","message":"GET /api/produits/mes-produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:51:02.590Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:51:02.595Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:51:05.400Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:51:05.403Z"}
+{"level":"info","message":"GET /api/produits/16 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:51:11.466Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:51:11.471Z"}
+{"level":"info","message":"POST /api/contacts - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:51:50.527Z"}
+{"level":"info","message":"Arrêt du serveur en cours...","service":"fotoloujay-backend","timestamp":"2025-10-16T08:52:28.679Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T08:52:33.517Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 2025","service":"fotoloujay-backend","timestamp":"2025-10-16T08:52:33.523Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:2025/api","service":"fotoloujay-backend","timestamp":"2025-10-16T08:52:33.524Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:52:39.839Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:52:40.124Z"}
+{"level":"info","message":"GET /api/produits/16 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:52:40.135Z"}
+{"level":"info","message":"POST /api/contacts - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T08:52:58.073Z"}
+{"level":"info","message":"Arrêt du serveur en cours...","service":"fotoloujay-backend","timestamp":"2025-10-16T08:59:16.558Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T08:59:36.074Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T08:59:36.080Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T09:01:03.750Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 2026","service":"fotoloujay-backend","timestamp":"2025-10-16T09:01:03.759Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:2026/api","service":"fotoloujay-backend","timestamp":"2025-10-16T09:01:03.760Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T09:01:03.761Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T09:02:47.735Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 3001","service":"fotoloujay-backend","timestamp":"2025-10-16T09:02:47.740Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:3001/api","service":"fotoloujay-backend","timestamp":"2025-10-16T09:02:47.740Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T09:02:47.742Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T09:03:29.831Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T09:03:29.847Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T09:04:56.660Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 4000","service":"fotoloujay-backend","timestamp":"2025-10-16T09:04:56.675Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:4000/api","service":"fotoloujay-backend","timestamp":"2025-10-16T09:04:56.676Z"}
+{"level":"info","message":"GET /api/produits/16 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:05:13.634Z"}
+{"level":"info","message":"Arrêt du serveur en cours...","service":"fotoloujay-backend","timestamp":"2025-10-16T09:07:28.559Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T09:07:40.324Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 4000","service":"fotoloujay-backend","timestamp":"2025-10-16T09:07:40.341Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:4000/api","service":"fotoloujay-backend","timestamp":"2025-10-16T09:07:40.342Z"}
+{"level":"info","message":"POST /api/contacts - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:08:34.787Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T09:08:42.351Z"}
+{"level":"info","message":"Arrêt du serveur en cours...","service":"fotoloujay-backend","timestamp":"2025-10-16T09:09:29.424Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T09:09:41.711Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 4000","service":"fotoloujay-backend","timestamp":"2025-10-16T09:09:41.720Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:4000/api","service":"fotoloujay-backend","timestamp":"2025-10-16T09:09:41.721Z"}
+{"level":"info","message":"POST /api/contacts - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:10:30.791Z"}
+{"level":"info","message":"GET /api/contacts/stats - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:10:50.352Z"}
+{"level":"info","message":"POST /api/contacts - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:12:43.310Z"}
+{"level":"info","message":"GET /api/contacts - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:12:56.942Z"}
+{"level":"info","message":"GET /api/produits/16 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:13:16.901Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:13:37.250Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:13:37.259Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:13:49.869Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:13:49.871Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:13:59.360Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:13:59.364Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:14:27.432Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:14:27.439Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:16:54.587Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:16:54.926Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:16:54.944Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:17:16.365Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:17:16.680Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:17:16.683Z"}
+{"level":"info","message":"POST /api/contacts - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:18:03.760Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:18:10.396Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:18:10.404Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T09:22:34.169Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T09:22:46.712Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T09:28:29.093Z"}
+{"level":"info","message":"GET /api/produits/9 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:30:58.752Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:30:58.759Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:31:24.577Z"}
+{"level":"info","message":"GET /api/produits/mes-produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:31:24.584Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:31:24.591Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:31:53.899Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:31:53.903Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T09:38:16.484Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T09:42:50.714Z"}
+{"level":"info","message":"Arrêt du serveur en cours...","service":"fotoloujay-backend","timestamp":"2025-10-16T09:49:09.332Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T09:53:48.626Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 4000","service":"fotoloujay-backend","timestamp":"2025-10-16T09:53:48.641Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:4000/api","service":"fotoloujay-backend","timestamp":"2025-10-16T09:53:48.643Z"}
+{"level":"info","message":"POST /api/contacts - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T09:58:41.474Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:02:20.877Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T10:11:04.476Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T10:11:15.521Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:11:21.404Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:11:25.441Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:11:25.447Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:11:34.416Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:11:34.519Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:11:34.523Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:11:41.851Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:11:41.941Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:11:41.943Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:11:49.699Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:11:49.770Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:11:49.772Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:12:00.810Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:12:00.861Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:12:00.863Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:12:08.750Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:12:08.851Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:12:08.853Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:12:17.320Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:12:17.372Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:12:17.374Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T10:12:41.822Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T10:12:47.978Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T10:13:07.558Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T10:13:13.881Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:14:24.063Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:14:24.163Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:14:24.164Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T10:14:49.689Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T10:15:03.836Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T10:15:16.878Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T10:15:27.446Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:15:42.811Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:15:42.913Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:15:42.915Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:16:02.956Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:16:03.081Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:16:03.082Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:16:12.964Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:16:12.966Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:16:35.753Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:16:35.826Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:16:35.829Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:20:04.626Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:20:04.732Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:20:04.733Z"}
+{"level":"info","message":"POST /api/auth/deconnexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:20:07.725Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:20:21.242Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:20:35.928Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T10:37:38.911Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T10:37:46.822Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T10:37:53.773Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T10:42:31.914Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T10:42:41.945Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:43:06.861Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T10:43:51.449Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T10:44:05.831Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 4000","service":"fotoloujay-backend","timestamp":"2025-10-16T10:44:05.841Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:4000/api","service":"fotoloujay-backend","timestamp":"2025-10-16T10:44:05.842Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:45:16.462Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:45:16.469Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:46:02.250Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:46:02.253Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T10:47:20.383Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:47:24.459Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:47:24.465Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:47:38.433Z"}
+{"level":"info","message":"Arrêt du serveur en cours...","service":"fotoloujay-backend","timestamp":"2025-10-16T10:52:17.238Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T10:52:25.388Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 4000","service":"fotoloujay-backend","timestamp":"2025-10-16T10:52:25.394Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:4000/api","service":"fotoloujay-backend","timestamp":"2025-10-16T10:52:25.395Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T10:53:52.038Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T10:57:11.713Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T10:58:06.908Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 4000","service":"fotoloujay-backend","timestamp":"2025-10-16T10:58:06.915Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:4000/api","service":"fotoloujay-backend","timestamp":"2025-10-16T10:58:06.916Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T10:59:15.710Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T11:00:33.814Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T11:00:44.377Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T11:01:19.681Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 4000","service":"fotoloujay-backend","timestamp":"2025-10-16T11:01:19.687Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:4000/api","service":"fotoloujay-backend","timestamp":"2025-10-16T11:01:19.687Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T11:01:19.688Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T11:01:26.967Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 4000","service":"fotoloujay-backend","timestamp":"2025-10-16T11:01:26.970Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:4000/api","service":"fotoloujay-backend","timestamp":"2025-10-16T11:01:26.970Z"}
+{"level":"info","message":"POST /api/auth/connexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:21:48.492Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:21:48.834Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:21:48.920Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:21:48.925Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:21:54.219Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:21:55.118Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:21:55.126Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:21:58.379Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:21:58.382Z"}
+{"level":"info","message":"POST /api/auth/deconnexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:22:01.391Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:22:17.410Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:22:46.182Z"}
+{"level":"info","message":"Arrêt du serveur en cours...","service":"fotoloujay-backend","timestamp":"2025-10-16T12:24:01.432Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T12:26:02.954Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 4000","service":"fotoloujay-backend","timestamp":"2025-10-16T12:26:02.961Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:4000/api","service":"fotoloujay-backend","timestamp":"2025-10-16T12:26:02.961Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:29:40.592Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:29:40.606Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:29:57.061Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:30:50.277Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T12:34:13.578Z"}
+{"level":"info","message":"Arrêt du serveur en cours...","service":"fotoloujay-backend","timestamp":"2025-10-16T12:34:23.354Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T12:34:29.523Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 4000","service":"fotoloujay-backend","timestamp":"2025-10-16T12:34:29.526Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:4000/api","service":"fotoloujay-backend","timestamp":"2025-10-16T12:34:29.526Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:34:50.874Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:35:45.815Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:35:45.823Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:36:11.077Z"}
+{"level":"info","message":"Arrêt du serveur en cours...","service":"fotoloujay-backend","timestamp":"2025-10-16T12:37:54.142Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T12:38:08.773Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 4000","service":"fotoloujay-backend","timestamp":"2025-10-16T12:38:08.776Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:4000/api","service":"fotoloujay-backend","timestamp":"2025-10-16T12:38:08.776Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:38:26.908Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:38:41.041Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T12:39:20.630Z"}
+{"level":"info","message":"Arrêt du serveur en cours...","service":"fotoloujay-backend","timestamp":"2025-10-16T12:40:35.410Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T12:41:17.213Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 4000","service":"fotoloujay-backend","timestamp":"2025-10-16T12:41:17.216Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:4000/api","service":"fotoloujay-backend","timestamp":"2025-10-16T12:41:17.216Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:41:38.635Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T12:42:03.732Z"}
+{"level":"info","message":"Arrêt du serveur en cours...","service":"fotoloujay-backend","timestamp":"2025-10-16T12:42:17.143Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T12:42:29.542Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 4000","service":"fotoloujay-backend","timestamp":"2025-10-16T12:42:29.545Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:4000/api","service":"fotoloujay-backend","timestamp":"2025-10-16T12:42:29.545Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:44:54.365Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:44:54.368Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:45:24.509Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:46:27.557Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:46:36.055Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:46:47.262Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:48:13.100Z"}
+{"level":"info","message":"Arrêt du serveur en cours...","service":"fotoloujay-backend","timestamp":"2025-10-16T12:48:56.213Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T12:49:07.859Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 4000","service":"fotoloujay-backend","timestamp":"2025-10-16T12:49:07.863Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:4000/api","service":"fotoloujay-backend","timestamp":"2025-10-16T12:49:07.863Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:49:19.170Z"}
+{"level":"info","message":"Arrêt du serveur en cours...","service":"fotoloujay-backend","timestamp":"2025-10-16T12:50:30.378Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T12:50:42.985Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 4000","service":"fotoloujay-backend","timestamp":"2025-10-16T12:50:42.997Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:4000/api","service":"fotoloujay-backend","timestamp":"2025-10-16T12:50:42.998Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:51:08.531Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T12:52:30.932Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:52:49.532Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:55:01.210Z"}
+{"level":"info","message":"Arrêt du serveur en cours...","service":"fotoloujay-backend","timestamp":"2025-10-16T12:55:57.927Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T12:56:10.586Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 4000","service":"fotoloujay-backend","timestamp":"2025-10-16T12:56:10.590Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:4000/api","service":"fotoloujay-backend","timestamp":"2025-10-16T12:56:10.591Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:56:39.676Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:57:13.673Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:57:22.920Z"}
+{"level":"info","message":"POST /api/auth/connexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:57:45.655Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:57:46.191Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:57:46.504Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T12:57:46.514Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:00:15.695Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:00:16.055Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:00:16.092Z"}
+{"level":"info","message":"Arrêt du serveur en cours...","service":"fotoloujay-backend","timestamp":"2025-10-16T13:00:21.232Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:00:25.029Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 4000","service":"fotoloujay-backend","timestamp":"2025-10-16T13:00:25.035Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:4000/api","service":"fotoloujay-backend","timestamp":"2025-10-16T13:00:25.035Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:00:28.366Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:00:28.741Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:00:28.765Z"}
+{"level":"info","message":"POST /api/auth/deconnexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:00:33.062Z"}
+{"level":"info","message":"POST /api/auth/inscription - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:00:48.870Z"}
+{"level":"info","message":"POST /api/auth/connexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:01:00.019Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:01:00.623Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:01:00.704Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:01:00.750Z"}
+{"level":"info","message":"POST /api/auth/deconnexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:02:25.387Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:03:24.522Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:03:24.526Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:03:42.098Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:03:42.100Z"}
+{"level":"info","message":"GET /api/produits/8 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:03:58.660Z"}
+{"level":"info","message":"POST /api/paiements/initier - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:04:16.987Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:04:26.546Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:04:26.550Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:05:05.099Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:05:06.524Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:05:07.750Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:05:09.014Z"}
+{"level":"info","message":"GET /api/produits/2 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:05:12.530Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:05:26.597Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:05:26.600Z"}
+{"level":"info","message":"POST /api/auth/connexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:06:57.347Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:06:57.894Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:06:57.932Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:06:57.934Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:07:05.150Z"}
+{"level":"info","message":"GET /api/produits/mes-produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:07:05.156Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:07:05.164Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:07:21.636Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:07:21.639Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:07:33.848Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:07:33.855Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:07:57.373Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:07:57.381Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:08:09.320Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:08:09.608Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:08:09.610Z"}
+{"level":"info","message":"GET /api/produits/8 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:08:32.344Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:08:32.349Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:08:43.550Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:08:43.554Z"}
+{"level":"info","message":"GET /api/produits/4 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:09:50.299Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:09:50.305Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:12:16.006Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:12:16.009Z"}
+{"level":"info","message":"POST /api/auth/deconnexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:12:31.142Z"}
+{"level":"info","message":"POST /api/auth/connexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:12:42.442Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:12:42.989Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:12:42.995Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:12:43.000Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:12:49.023Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:12:49.027Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:13:08.480Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:13:08.743Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:13:08.746Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:13:34.642Z"}
+{"level":"info","message":"GET /api/produits/6 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:13:39.680Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:13:39.685Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:13:43.676Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:13:43.679Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:13:46.239Z"}
+{"level":"info","message":"GET /api/produits/6 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:13:56.326Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:13:56.330Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:14:05.841Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:14:19.675Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:14:22.958Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:14:37.113Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:14:37.563Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:14:48.772Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:14:49.062Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:16:09.732Z"}
+{"level":"info","message":"Arrêt du serveur en cours...","service":"fotoloujay-backend","timestamp":"2025-10-16T13:16:58.376Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:17:15.866Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 2025","service":"fotoloujay-backend","timestamp":"2025-10-16T13:17:15.872Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:2025/api","service":"fotoloujay-backend","timestamp":"2025-10-16T13:17:15.872Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:17:15.873Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:18:58.386Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:18:58.394Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:19:37.003Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 2026","service":"fotoloujay-backend","timestamp":"2025-10-16T13:19:37.012Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:2026/api","service":"fotoloujay-backend","timestamp":"2025-10-16T13:19:37.014Z"}
+{"level":"info","message":"GET /api/health - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:19:54.547Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:20:53.314Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:20:53.642Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:21:10.814Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:21:10.826Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:21:11.094Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:21:22.080Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:21:35.851Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:22:08.858Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:22:15.553Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:22:20.669Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:22:21.922Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:22:21.938Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:22:21.950Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:22:27.894Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:22:27.901Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:22:27.919Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:22:44.428Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:22:44.433Z"}
+{"level":"info","message":"GET /api/produits/16 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:22:46.782Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:22:46.791Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:22:51.567Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:22:51.572Z"}
+{"level":"info","message":"POST /api/auth/deconnexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:22:55.027Z"}
+{"level":"info","message":"POST /api/auth/connexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:23:13.947Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:23:14.534Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:23:14.563Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:23:14.571Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:25:21.225Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:25:21.228Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:29:58.682Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:29:59.117Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:29:59.119Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:44:18.281Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:44:18.737Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:44:18.740Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:44:35.549Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:44:35.553Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:44:56.624Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:47:41.177Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:47:41.558Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:47:41.567Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:47:49.393Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:47:49.400Z"}
+{"level":"info","message":"POST /api/auth/deconnexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:47:58.964Z"}
+{"level":"info","message":"POST /api/auth/connexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:48:53.330Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:48:53.856Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:48:53.962Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:48:53.995Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:49:00.288Z"}
+{"level":"info","message":"GET /api/produits/mes-produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:49:00.298Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T13:49:00.310Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:50:05.955Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:50:05.954Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:50:06.953Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:50:43.895Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:50:43.895Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:50:43.894Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:51:01.051Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:51:01.282Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:51:01.282Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:51:23.853Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:51:24.025Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:51:24.024Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:51:38.920Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:51:38.920Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:51:38.948Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:52:05.877Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:52:27.306Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T13:52:27.314Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T22:03:08.430Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 2026","service":"fotoloujay-backend","timestamp":"2025-10-16T22:03:08.433Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:2026/api","service":"fotoloujay-backend","timestamp":"2025-10-16T22:03:08.434Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T22:03:08.434Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T22:03:32.526Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T22:03:32.530Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T22:04:07.174Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T22:04:07.178Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T22:05:44.400Z"}
+{"level":"info","message":"🚀 Serveur FotoLouJay démarré sur le port 2026","service":"fotoloujay-backend","timestamp":"2025-10-16T22:05:44.402Z"}
+{"level":"info","message":"📡 API disponible sur http://localhost:2026/api","service":"fotoloujay-backend","timestamp":"2025-10-16T22:05:44.403Z"}
+{"level":"info","message":"Connexion à la base de données établie","service":"fotoloujay-backend","timestamp":"2025-10-16T22:09:17.145Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:10:22.933Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:10:22.942Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:10:36.829Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:10:36.831Z"}
+{"level":"info","message":"POST /api/auth/connexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:10:56.937Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:10:57.239Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:10:57.261Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:10:57.326Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:10:57.330Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:11:14.711Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:11:17.251Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:11:17.253Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:11:20.456Z"}
+{"level":"info","message":"GET /api/produits/mes-produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:11:20.461Z"}
+{"level":"info","message":"GET /api/produits/46 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:11:29.605Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:11:29.609Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:11:36.028Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:11:36.032Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:11:39.883Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:11:39.886Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:11:49.647Z"}
+{"level":"info","message":"GET /api/produits/mes-produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:11:49.650Z"}
+{"level":"info","message":"GET /api/produits/46 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:11:54.791Z"}
+{"level":"info","message":"PUT /api/produits/46 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:12:24.441Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:12:26.020Z"}
+{"level":"info","message":"GET /api/produits/mes-produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:12:26.025Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:12:44.989Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:12:44.990Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:14:26.430Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:14:26.433Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:14:26.542Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:14:26.543Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:14:52.315Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:14:52.319Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:14:52.391Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:14:52.392Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:14:53.978Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:14:53.980Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:14:54.130Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:14:54.132Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:17:27.230Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:17:27.233Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:17:27.342Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:17:27.343Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:17:57.160Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:17:57.161Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:17:57.305Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:17:57.306Z"}
+{"level":"info","message":"POST /api/auth/deconnexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:18:06.807Z"}
+{"level":"info","message":"POST /api/auth/connexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:18:49.957Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:18:50.250Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:18:50.257Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:18:50.266Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:18:50.269Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:19:03.701Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:19:14.524Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:19:14.527Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:19:34.187Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:19:34.192Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:19:34.198Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:19:41.683Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:19:41.685Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:19:44.742Z"}
+{"level":"info","message":"PUT /api/produits/40/valider - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:19:48.425Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:19:48.454Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:19:51.174Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:19:51.176Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:19:56.929Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:19:56.932Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:19:56.935Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:19:58.685Z"}
+{"level":"info","message":"PUT /api/produits/29/rejeter - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:20:03.283Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:20:03.310Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:20:12.155Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:20:12.157Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:20:12.161Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:20:26.927Z"}
+{"level":"info","message":"PUT /api/utilisateurs/27/statut - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:20:33.805Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:20:33.836Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:20:36.574Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:20:36.577Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:20:45.970Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:20:45.972Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:20:45.973Z"}
+{"level":"info","message":"PUT /api/utilisateurs/32/statut - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:21:01.801Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:21:01.827Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:24:59.851Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:24:59.853Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:24:59.968Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:24:59.971Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:24:59.975Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:25:21.662Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:25:26.744Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:25:26.747Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:26:40.713Z"}
+{"level":"info","message":"GET /api/notifications - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:26:40.726Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:26:40.783Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:26:40.784Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:26:54.144Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:26:54.147Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:27:00.660Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:27:00.664Z"}
+{"level":"info","message":"GET /api/utilisateurs - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:27:00.667Z"}
+{"level":"info","message":"GET /api/produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:27:12.084Z"}
+{"level":"info","message":"GET /api/auth/profil - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:27:18.126Z"}
+{"level":"info","message":"GET /api/produits/mes-produits - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:27:18.129Z"}
+{"level":"info","message":"GET /api/produits/statistiques - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:27:18.133Z"}
+{"level":"info","message":"POST /api/auth/deconnexion - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:27:21.138Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:27:21.169Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:27:21.171Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:29:27.302Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:29:27.303Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:30:01.047Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:30:01.049Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:30:07.756Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:30:07.758Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:30:15.269Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:30:15.270Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:32:09.352Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:32:09.356Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:32:35.347Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:32:35.349Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:32:50.973Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:32:50.979Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:33:01.077Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:33:01.101Z"}
+{"level":"info","message":"GET /api/produits/42 - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:33:26.459Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:33:31.575Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:33:31.577Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:33:39.051Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:33:39.055Z"}
+{"level":"info","message":"GET /api/produits/publics - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:34:19.135Z"}
+{"level":"info","message":"GET /api/produits/vip - ::1","service":"fotoloujay-backend","timestamp":"2025-10-16T22:34:19.138Z"}

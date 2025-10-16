@@ -27,11 +27,16 @@
       <input matInput [(ngModel)]="registerData.telephone" name="telephone">
     </mat-form-field>
 
+    <input type="hidden" [(ngModel)]="registerData.role" name="role" [value]="RoleUtilisateur.VENDEUR">
+
     <mat-form-field class="form-field">
       <mat-label>Mot de passe</mat-label>
-      <input matInput type="password" [(ngModel)]="registerData.motDePasse" name="motDePasse" required>
+      <input matInput type="password" [(ngModel)]="registerData.motDePasse" name="motDePasse" required
+             minlength="6" pattern="^(?=.*\d).{6,}$"
+             title="Le mot de passe doit contenir au moins 6 caractères avec au moins un chiffre">
+      <mat-hint>Minimum 6 caractères, au moins un chiffre</mat-hint>
       <mat-error *ngIf="registerForm.submitted && registerForm.controls['motDePasse']?.invalid">
-        Mot de passe requis (min 6 caractères, 1 majuscule, 1 minuscule, 1 chiffre)
+        Mot de passe requis (min 6 caractères, 1 chiffre)
       </mat-error>
     </mat-form-field>
 
