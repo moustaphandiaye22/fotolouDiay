@@ -1,54 +1,306 @@
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     User:
+ *       type: object
+ *       properties:
+ *         id:
+ *           type: integer
+ *           description: ID unique de l'utilisateur
+ *         nom:
+ *           type: string
+ *           description: Nom de l'utilisateur
+ *         prenom:
+ *           type: string
+ *           description: Prénom de l'utilisateur
+ *         email:
+ *           type: string
+ *           format: email
+ *           description: Adresse email de l'utilisateur
+ *         telephone:
+ *           type: string
+ *           description: Numéro de téléphone
+ *         role:
+ *           type: string
+ *           enum: [CLIENT, VENDEUR, MODERATEUR, ADMINISTRATEUR]
+ *           description: Rôle de l'utilisateur
+ *         actif:
+ *           type: boolean
+ *           description: Statut actif de l'utilisateur
+ *         creeLe:
+ *           type: string
+ *           format: date-time
+ *           description: Date de création
+ *         misAJourLe:
+ *           type: string
+ *           format: date-time
+ *           description: Date de dernière mise à jour
+ *     LoginRequest:
+ *       type: object
+ *       required:
+ *         - email
+ *         - motDePasse
+ *       properties:
+ *         email:
+ *           type: string
+ *           format: email
+ *           description: Adresse email de l'utilisateur
+ *         motDePasse:
+ *           type: string
+ *           format: password
+ *           description: Mot de passe de l'utilisateur
+ *     RegisterRequest:
+ *       type: object
+ *       required:
+ *         - nom
+ *         - prenom
+ *         - email
+ *         - motDePasse
+ *         - telephone
+ *       properties:
+ *         nom:
+ *           type: string
+ *           description: Nom de l'utilisateur
+ *         prenom:
+ *           type: string
+ *           description: Prénom de l'utilisateur
+ *         email:
+ *           type: string
+ *           format: email
+ *           description: Adresse email de l'utilisateur
+ *         motDePasse:
+ *           type: string
+ *           format: password
+ *           description: Mot de passe de l'utilisateur
+ *         telephone:
+ *           type: string
+ *           description: Numéro de téléphone
+ *         role:
+ *           type: string
+ *           enum: [CLIENT, VENDEUR]
+ *           default: CLIENT
+ *           description: Rôle souhaité
+ *     ChangePasswordRequest:
+ *       type: object
+ *       required:
+ *         - ancienMotDePasse
+ *         - nouveauMotDePasse
+ *       properties:
+ *         ancienMotDePasse:
+ *           type: string
+ *           format: password
+ *           description: Ancien mot de passe
+ *         nouveauMotDePasse:
+ *           type: string
+ *           format: password
+ *           description: Nouveau mot de passe
+ *     AuthResponse:
+ *       type: object
+ *       properties:
+ *         success:
+ *           type: boolean
+ *           example: true
+ *         message:
+ *           type: string
+ *           example: "Connexion réussie"
+ *         data:
+ *           type: object
+ *           properties:
+ *             utilisateur:
+ *               $ref: '#/components/schemas/User'
+ *             token:
+ *               type: string
+ *               description: Token JWT d'authentification
+ *               example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+ */
+
 // Routes d'authentification pour FotoLouJay
 
 import { Router } from 'express';
 import { ControleurAuth } from '../controllers/auth.controller';
 import { verifierToken } from '../middlewares/auth.middleware';
-import { 
-  validationInscription, 
-  validationConnexion, 
-  validationChangementMotDePasse 
+import {
+  validationInscription,
+  validationConnexion,
+  validationChangementMotDePasse
 } from '../validators/auth.validator';
 
 export const routesAuth = Router();
 
 /**
- * @route POST /api/auth/inscription
- * @desc Inscription d'un nouvel utilisateur
- * @access Public
+ * @swagger
+ * /api/auth/inscription:
+ *   post:
+ *     summary: Inscription d'un nouvel utilisateur
+ *     tags: [Authentification]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/RegisterRequest'
+ *     responses:
+ *       201:
+ *         description: Utilisateur créé avec succès
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/AuthResponse'
+ *       400:
+ *         description: Données invalides ou email déjà utilisé
+ *       500:
+ *         description: Erreur serveur
  */
 routesAuth.post('/inscription', validationInscription, ControleurAuth.inscrire);
 
 /**
- * @route POST /api/auth/connexion
- * @desc Connexion d'un utilisateur
- * @access Public
+ * @swagger
+ * /api/auth/connexion:
+ *   post:
+ *     summary: Connexion d'un utilisateur
+ *     tags: [Authentification]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/LoginRequest'
+ *     responses:
+ *       200:
+ *         description: Connexion réussie
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/AuthResponse'
+ *       400:
+ *         description: Email ou mot de passe incorrect
+ *       401:
+ *         description: Compte désactivé
+ *       500:
+ *         description: Erreur serveur
  */
 routesAuth.post('/connexion', validationConnexion, ControleurAuth.connecter);
 
 /**
- * @route GET /api/auth/verifier-token
- * @desc Vérification de la validité du token
- * @access Public
+ * @swagger
+ * /api/auth/verifier-token:
+ *   get:
+ *     summary: Vérification de la validité du token
+ *     tags: [Authentification]
+ *     responses:
+ *       200:
+ *         description: Token valide
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 message:
+ *                   type: string
+ *                   example: "Token valide"
+ *       401:
+ *         description: Token invalide ou expiré
+ *       500:
+ *         description: Erreur serveur
  */
 routesAuth.get('/verifier-token', ControleurAuth.verifierToken);
 
 /**
- * @route POST /api/auth/deconnexion
- * @desc Déconnexion (suppression côté client)
- * @access Private
+ * @swagger
+ * /api/auth/deconnexion:
+ *   post:
+ *     summary: Déconnexion d'un utilisateur
+ *     tags: [Authentification]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Déconnexion réussie
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 message:
+ *                   type: string
+ *                   example: "Déconnexion réussie"
+ *       401:
+ *         description: Non autorisé
+ *       500:
+ *         description: Erreur serveur
  */
 routesAuth.post('/deconnexion', verifierToken, ControleurAuth.deconnecter);
 
 /**
- * @route GET /api/auth/profil
- * @desc Récupération du profil utilisateur connecté
- * @access Private
+ * @swagger
+ * /api/auth/profil:
+ *   get:
+ *     summary: Récupération du profil utilisateur connecté
+ *     tags: [Authentification]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Profil récupéré avec succès
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 data:
+ *                   $ref: '#/components/schemas/User'
+ *       401:
+ *         description: Non autorisé
+ *       404:
+ *         description: Utilisateur non trouvé
+ *       500:
+ *         description: Erreur serveur
  */
 routesAuth.get('/profil', verifierToken, ControleurAuth.obtenirProfil);
 
 /**
- * @route PUT /api/auth/changer-mot-de-passe
- * @desc Changement de mot de passe
- * @access Private
+ * @swagger
+ * /api/auth/changer-mot-de-passe:
+ *   put:
+ *     summary: Changement de mot de passe
+ *     tags: [Authentification]
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/ChangePasswordRequest'
+ *     responses:
+ *       200:
+ *         description: Mot de passe changé avec succès
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 message:
+ *                   type: string
+ *                   example: "Mot de passe changé avec succès"
+ *       400:
+ *         description: Ancien mot de passe incorrect
+ *       401:
+ *         description: Non autorisé
+ *       500:
+ *         description: Erreur serveur
  */
 routesAuth.put('/changer-mot-de-passe', verifierToken, validationChangementMotDePasse, ControleurAuth.changerMotDePasse);

@@ -3,6 +3,8 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import { PrismaClient } from '@prisma/client';
 import winston from 'winston';
+import swaggerJsdoc from 'swagger-jsdoc';
+import swaggerUi from 'swagger-ui-express';
 
 // Import des routes
 import { routesUtilisateur } from './routes/utilisateur.routes';
@@ -34,6 +36,47 @@ const logger = winston.createLogger({
 
 // Initialisation de Prisma
 export const prisma = new PrismaClient();
+
+// Configuration Swagger
+const swaggerOptions = {
+  definition: {
+    openapi: '3.0.0',
+    info: {
+      title: 'FotoLouJay API',
+      version: '1.0.0',
+      description: 'API pour l\'application mobile de vente en ligne FotoLouJay',
+      contact: {
+        name: 'Equipe FotoLouJay',
+      },
+    },
+    servers: [
+      {
+        url: 'http://localhost:3000/api',
+        description: 'Serveur de développement',
+      },
+    ],
+    components: {
+      securitySchemes: {
+        bearerAuth: {
+          type: 'http',
+          scheme: 'bearer',
+          bearerFormat: 'JWT',
+        },
+      },
+    },
+    security: [
+      {
+        bearerAuth: [],
+      },
+    ],
+  },
+  apis: [
+    './routes/*.ts',
+    './controllers/*.ts',
+  ],
+};
+
+const swaggerSpecs = swaggerJsdoc(swaggerOptions);
 
 // Création de l'application Express
 const app = express();
@@ -71,6 +114,9 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // Servir les fichiers statiques (images uploadées)
 app.use('/uploads', express.static('uploads'));
+
+// Route Swagger
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 
 // Middleware de logging des requêtes
 app.use((req, res, next) => {

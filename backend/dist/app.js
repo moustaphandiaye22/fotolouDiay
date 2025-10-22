@@ -18,6 +18,8 @@ const cors_1 = __importDefault(require("cors"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const client_1 = require("@prisma/client");
 const winston_1 = __importDefault(require("winston"));
+const swagger_jsdoc_1 = __importDefault(require("swagger-jsdoc"));
+const swagger_ui_express_1 = __importDefault(require("swagger-ui-express"));
 // Import des routes
 const utilisateur_routes_1 = require("./routes/utilisateur.routes");
 const produit_routes_1 = require("./routes/produit.routes");
@@ -42,6 +44,45 @@ const logger = winston_1.default.createLogger({
 });
 // Initialisation de Prisma
 exports.prisma = new client_1.PrismaClient();
+// Configuration Swagger
+const swaggerOptions = {
+    definition: {
+        openapi: '3.0.0',
+        info: {
+            title: 'FotoLouJay API',
+            version: '1.0.0',
+            description: 'API pour l\'application mobile de vente en ligne FotoLouJay',
+            contact: {
+                name: 'Equipe FotoLouJay',
+            },
+        },
+        servers: [
+            {
+                url: 'http://localhost:3000/api',
+                description: 'Serveur de développement',
+            },
+        ],
+        components: {
+            securitySchemes: {
+                bearerAuth: {
+                    type: 'http',
+                    scheme: 'bearer',
+                    bearerFormat: 'JWT',
+                },
+            },
+        },
+        security: [
+            {
+                bearerAuth: [],
+            },
+        ],
+    },
+    apis: [
+        './routes/*.ts',
+        './controllers/*.ts',
+    ],
+};
+const swaggerSpecs = (0, swagger_jsdoc_1.default)(swaggerOptions);
 // Création de l'application Express
 const app = (0, express_1.default)();
 const PORT = process.env.PORT || 3000;
@@ -75,6 +116,8 @@ app.use(express_1.default.json({ limit: '10mb' }));
 app.use(express_1.default.urlencoded({ extended: true, limit: '10mb' }));
 // Servir les fichiers statiques (images uploadées)
 app.use('/uploads', express_1.default.static('uploads'));
+// Route Swagger
+app.use('/api-docs', swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup(swaggerSpecs));
 // Middleware de logging des requêtes
 app.use((req, res, next) => {
     logger.info(`${req.method} ${req.path} - ${req.ip}`);

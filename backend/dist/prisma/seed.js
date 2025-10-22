@@ -163,6 +163,15 @@ function main() {
                 const email = `${nom.prenom.toLowerCase()}.${nom.nom.toLowerCase()}@fotoljay.sn`;
                 // Générer un numéro de téléphone sénégalais
                 const telephone = `+221 ${77 + Math.floor(Math.random() * 7)} ${Math.floor(Math.random() * 900) + 100} ${Math.floor(Math.random() * 90) + 10} ${Math.floor(Math.random() * 90) + 10}`;
+                // Déterminer le rôle: 2 modérateurs, quelques vendeurs, le reste utilisateurs
+                let role = 'UTILISATEUR';
+                if (i < 2) {
+                    role = 'MODERATEUR'; // 2 modérateurs
+                }
+                else if (i < 6) {
+                    role = 'VENDEUR'; // 4 vendeurs (indices 2, 3, 4, 5)
+                }
+                // Les autres (i >= 6) restent UTILISATEUR
                 const utilisateur = yield prisma.utilisateur.create({
                     data: {
                         nom: nom.nom,
@@ -170,7 +179,7 @@ function main() {
                         email: email,
                         telephone: telephone,
                         motDePasse: motDePasseUser,
-                        role: i < 2 ? 'MODERATEUR' : 'UTILISATEUR', // 2 modérateurs
+                        role: role,
                         estActif: true,
                         dateCreation: new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000), // Dates aléatoires sur 30 jours
                         dateModification: new Date()
